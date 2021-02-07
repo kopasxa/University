@@ -7,11 +7,12 @@
 .menu{
     display: flex;
     justify-content: space-between;
+    color: black;
 }
 .mainMenu{
     display: flex;
     justify-content: space-around;
-    width: 700px;
+    width: 80%;
     
 }
 header{
@@ -28,9 +29,73 @@ header{
 }
 .lang{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 .block{
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+.act{
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+}
+.univer{
+    display: flex;
+    justify-content: center;
+}
+.photo{
+    width: 55%;
+}
+.photoUniver{
+    display: flex;
+    width: 110%;
+    margin-top: -18%;
+    
+}
+.inforUniver{
+    display: flex;
+    width: 40%;
+    
+}
+#inforUniver{
+    line-height: 150%;
+  
+    font-size: 180%;
+}
+.photoInfor{
+    display: flex;
+    align-items: flex-start;
+}
+.inforMore{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin-left: 55%;
+    margin-top: -21%;
+
+}
+.morePhoto{
+    width:50%;
+}
+.more{
+    width: 20%;
+}
+.moreHref{
+    display: flex;
+    justify-content: ;
+}
+.progress{
+    margin-left: 55%;
+    background-color: white;
+    box-shadow: none;
+    height: auto;
+    margin-top: 5%;
+}
+.progressHref{
+    font-size: 180%;
+    color: black;
+    text-decoration: underline;
 }
