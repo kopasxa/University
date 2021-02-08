@@ -13,12 +13,25 @@ $(document).ready(function () {
 
   const menuBtnBurger = document.querySelector(".menu-btn__burger");
 
-  // Slider
-
-  $(".owl-carousel").owlCarousel({
+// Sliders
+  
+  // 1
+  $("#slider1").owlCarousel({
     loop:true,
     margin:10,
+    nav:false,
     responsiveClass:true,
     items:1,
-});
+  });
+
+  // 2
+
+  $("#slider2").owlCarousel({
+    loop:true,
+    margin:24,
+    navText: [],
+    nav:true,
+    responsiveClass:true,
+    items:9,
+  });
 });

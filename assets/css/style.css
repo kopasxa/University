@@ -222,6 +222,56 @@ header {
     margin-left: 60px;
 }
 
+.slider2Screen1 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F7F7F7;
+    border-radius: 30px;
+    padding: 40px 30px;
+    font-family: 'Montserrat';
+}
+
+.slider2Screen1 {
+    margin-top: 50px;
+}
+
+.slider2Screen1 .owl-nav {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-top: 42px;
+}
+
+.owl-nav .owl-next, .owl-nav .owl-prev:focus {
+    outline: none;
+}
+
+.owl-nav .owl-next, .owl-nav .owl-prev {
+    width: 42px;
+    height: 37px;
+    background: url(../img/arrowRight.png) !important;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+}
+
+.owl-nav .owl-prev {
+    width: 30px;
+    height: 30px;
+    background: url(../img/arrowLeft.png) !important;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+}
+
+.slider2Screen1 .card img {
+    width: 100px;
+}
+
+.slider2Screen1 .card p.headName {
+    margin-top: 16px;
+    font-size: 15px;
+}
+
 /* header{
     display: flex;
     align-items: center;
