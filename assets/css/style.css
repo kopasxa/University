@@ -240,7 +240,7 @@ a:hover:after {
   display: flex !important;
   align-items: center;
   justify-content: center;
-  margin-top: 42px;
+  margin-top: 42px !important;
 }
 
 .owl-nav .owl-next,
@@ -248,8 +248,8 @@ a:hover:after {
   outline: none;
 }
 
-.owl-nav .owl-next,
-.owl-nav .owl-prev {
+.prettyArrow .owl-nav .owl-next,
+.prettyArrow .owl-nav .owl-prev {
   width: 42px;
   height: 37px;
   background: url(../img/arrowRight.png) !important;
@@ -257,12 +257,13 @@ a:hover:after {
   background-repeat: no-repeat !important;
 }
 
-.owl-nav .owl-prev {
+.prettyArrow .owl-nav .owl-prev {
   width: 30px;
   height: 30px;
   background: url(../img/arrowLeft.png) !important;
   background-size: 100% !important;
   background-repeat: no-repeat !important;
+  margin-right: 29px;
 }
 
 .slider2Screen1 .card img {
@@ -274,40 +275,146 @@ a:hover:after {
   font-size: 15px;
 }
 
-/* header{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+
+/* ** NEWS ** */
+
+#news .container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
 }
-.stripMenu {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
+
+#news .leftBlock .wrapper {
+  background: #F7F7F7;
+  border-radius: 5px;
+  padding: 24px 44px;
+  margin-right: 24px;
+  padding-bottom: 65px;
+  position: relative;
+  overflow: auto;
 }
-.menu {
-    display: flex;
-    justify-content: space-between;
-    color: black;
+
+#news .leftBlock .wrapper h2 {
+  color: black;
+  font-size: 30px;
 }
-.mainMenu {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
+
+#news .leftBlock .wrapper .oneNews {
+  border-top: 1px solid #E9E7E7;
+  padding-top: 16px;
+  margin-top: 20px;
 }
-.mainMenu li {
-    list-style: none;
+
+#news .leftBlock .wrapper .oneNews a {
+  text-decoration: none;
 }
-.buttonLang {
-    display: inline-flex;
-    justify-content: flex-end;
-    border-radius: 30px;
-    
+
+#news .leftBlock .oneNews .text {
+  font-size: 15px;
+  color: #000000;
+  font-weight: 500;
+  font-family: "Roboto";
 }
-.lang {
-    display: flex;
-    justify-content: space-between;
+
+#news .leftBlock .oneNews .date {
+  font-size: 13px;
+  color: #918484;
 }
+
+#news .leftBlock .wrapper .btnNews {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 13px;
+  background: #005FA0;
+  color: white;
+  font-size: 15px;
+  border: none;
+}
+
+#news .leftBlock .wrapper .btnNews:focus {
+  outline: none;
+}
+
+#news .leftBlock .newsCircle {
+  margin-left: 172px;
+  margin-top: 62px;
+}
+
+#news .rightBlock {
+  padding-top: 47px;
+  width: 77%;
+}
+
+#news .rightBlock .tabs {
+  display: flex;
+  list-style: none;
+  padding-left: 25px;
+}
+
+#news .rightBlock .tabs li {
+  margin-right: 43px;
+}
+
+#news .rightBlock .tabs a {
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #000000;
+  text-decoration: none;
+}
+
+#news .rightBlock .tabs .active {
+  font-size: 15px;
+  color: #000000;
+  font-family: 'Roboto';
+  font-weight: bold;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #005FA0;
+}
+
+#news .rightBlock .tab_content .mainBlock {
+  display: flex;
+  margin: 24px 0;
+}
+
+#news .rightBlock .tab_content .mainBlock .left {
+  background: #005FA0;
+  border-radius: 5px;
+  margin-right: -3px;
+  color: #FFFFFF;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#news .rightBlock .tab_content .mainBlock .left h1 {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 40px;
+  max-width: 444px;
+}
+
+#news .rightBlock .tab_content .mainBlock .left p {
+  font-family: 'Roboto';
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+#news .rightBlock .tab_content .owl-nav {
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.owl-nav button span {
+  display: none;
+}
+
+/* 
 .block {
     display: flex;
     align-items: center;
@@ -376,15 +483,17 @@ a:hover:after {
     text-decoration: underline;
 }
  */
+
 footer {
   background-color: #393939;
+  padding-bottom: 60px;
 }
 footer .firstSection {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #393939;
   height: 100%;
-  padding: 98px 0 78px 0;
+  padding: 98px 0 78px;
 }
 
 footer .firstSection h2 {
@@ -418,7 +527,7 @@ footer .inSection {
 }
 
 footer .social {
-    margin-bottom: 18px;
+  margin-bottom: 18px;
 }
 
 footer .socialPhoto_block {
@@ -430,18 +539,79 @@ footer .socialPhoto_block:first-child {
 }
 
 footer hr {
-    border: none;
-    height: 1px;
-    background: #4E4D4D;
+  border: none;
+  height: 1px;
+  background: #4e4d4d;
 }
 
-/* .footerDownLine {
+footer .footerSlider .item .wrapper {
   display: flex;
-  height: 40%;
-  width: 40%;
-  background-color: #5b5959;
+  align-items: center;
 }
-.siteInfor {
-  margin-top: 20%;
-  margin-left: -100%;
-} */
+
+/* ** FOOTER SLIDER ** */
+
+footer .footerSlider .item .wrapper img {
+  width: auto;
+}
+
+.footerSlider .owl-nav {
+  display: flex !important;
+  justify-content: flex-end;
+}
+
+.footerSlider .owl-nav .owl-next,
+.footerSlider .owl-nav .owl-prev {
+  width: 40px;
+  height: 40px;
+  background: url(../img/footerArrow.png) !important;
+  background-repeat: no-repeat !important;
+  border: 2px solid #857C7C !important;
+  border-radius: 0;
+  background-position: 50% 50% !important;
+}
+
+.footerSlider .owl-nav .owl-prev {
+  transform: rotate(180deg);
+}
+
+.owl-theme .owl-nav {
+  margin: 0;
+}
+
+footer .owl-carousel, footer .owl-carousel.owl-loaded {
+  display: flex !important;
+  align-items: center;
+}
+
+footer .footerContainer {
+  width: 96%;
+}
+
+footer .footerSite {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footerSiteInfor {
+  display: flex;
+  align-items: center;
+}
+
+footer .siteInfor {
+  color: #857c7c;
+  font-size: 15px;
+  font-family: 'Roboto';
+  width: 194px;
+  margin: 0;
+  margin-left: 5%;
+}
+
+footer .footerEnd {
+  color: #857c7c;
+  margin-top: 3%;
+}
+
+footer .inSectionHref {
+  color: #857c7c;
+}
