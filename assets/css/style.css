@@ -350,7 +350,6 @@ a:hover:after {
 
 #news .rightBlock {
   padding-top: 47px;
-  width: 77%;
 }
 
 #news .rightBlock .tabs {
@@ -410,7 +409,12 @@ a:hover:after {
   margin-top: 50px;
 }
 
-#news .rightBlock .tab_content .owl-nav {
+#news .rightBlock .tab_content #sliderNews2 {
+  margin-top: 40px;
+}
+
+#news .rightBlock .tab_content .owl-nav,
+#events .mainBlock .rightBlock .sliderEvents .owl-nav {
   display: flex !important;
   justify-content: flex-end;
   align-items: center;
@@ -420,75 +424,207 @@ a:hover:after {
   display: none;
 }
 
-/* 
-.block {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 50%;
+.w-77 {
+  width: 77%;
 }
-.act {
-    display: flex;
-    justify-content: space-between;
-    width: 80px;
+
+/* ** EVENTS ** */
+
+#events {
+  margin-top: 24px;
 }
-.univer {
-    display: flex;
-    justify-content: center;
+
+#events .mainBlock {
+  display: flex;
+  justify-content: flex-end;
 }
-.photo{
-    width: 55%;
+
+#events .mainBlock .leftBlock {
+  position: relative;
+  width: 33%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.photoUniver{
-    display: flex;
-    width: 110%;
-    margin-top: -18%;
-    
+
+#events .mainBlock .leftBlock a {
+  text-decoration: underline;
 }
-.inforUniver{
-    display: flex;
-    width: 40%;
-    
+
+#events .mainBlock .leftBlock img {
+  position: absolute;
+  z-index: -1;
+  left: 21px;
+  margin-bottom: 20px;
 }
-#inforUniver{
-    line-height: 150%;
-  
-    font-size: 180%;
+
+#events .mainBlock .leftBlock h3 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0;
 }
-.photoInfor{
-    display: flex;
-    align-items: flex-start;
+
+#events .mainBlock .rightBlock .sliderEvents .yellowCard {
+  border: 2px solid #F8EFD0;
 }
-.inforMore{
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
-    margin-left: 55%;
-    margin-top: -21%;
+
+#events .mainBlock .rightBlock .sliderEvents .yellowCard .wrapperDate p {
+  background: #ecc951;
 }
-.morePhoto{
-    width:50%;
+
+#events .mainBlock .rightBlock .sliderEvents .yellowCard .date {
+  border-top: 16px solid #ecc951;
+  border-bottom: 16px solid #ecc951;
 }
-.more{
-    width: 20%;
+
+#events .mainBlock .rightBlock .sliderEvents .noBrownCard {
+  border: 2px solid #ECD1CA;
 }
-.moreHref{
-    display: flex;
-    justify-content: ;
+
+#events .mainBlock .rightBlock .sliderEvents .noBrownCard .wrapperDate p {
+  background: #CB7755;
 }
-.progress{
-    margin-left: 55%;
-    background-color: white;
-    box-shadow: none;
-    height: auto;
-    margin-top: 5%;
+
+#events .mainBlock .rightBlock .sliderEvents .noBrownCard .date {
+  border-top: 16px solid #CB7755;
+  border-bottom: 16px solid #CB7755;
 }
-.progressHref{
-    font-size: 180%;
-    color: black;
-    text-decoration: underline;
+
+#events .mainBlock .rightBlock .sliderEvents .brownCard {
+  border: 2px solid #DBCCC5;
 }
- */
+
+#events .mainBlock .rightBlock .sliderEvents .brownCard .wrapperDate p {
+  background: #9D6447;
+}
+
+#events .mainBlock .rightBlock .sliderEvents .brownCard .date {
+  border-top: 16px solid #9D6447;
+  border-bottom: 16px solid #9D6447;
+}
+
+
+
+#events .mainBlock .rightBlock .sliderEvents .card {
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 42px 0 80px;
+  margin-bottom: 15px;
+}
+
+#events .mainBlock .rightBlock .sliderEvents .card .wrapperMain {
+  padding: 46px 52px 0;
+}
+
+#events .mainBlock .rightBlock .sliderEvents .card .wrapperDate {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: fit-content;
+}
+
+#events .mainBlock .rightBlock .sliderEvents .card .wrapperDate p {
+  padding: 7px 28px;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 13px;
+  color: #FFFFFF;
+}
+
+#events .mainBlock .rightBlock .sliderEvents .card .date {
+  top: 0;
+  right: 0;
+  position: absolute;
+  border-right: 12px solid white;
+}
+
+#events .mainBlock .rightBlock .sliderEvents .card .mainText {
+  font-family: "Roboto";
+  font-size: 22px;
+  text-decoration: underline;
+  color: #000000;
+  margin-bottom: 50px;
+}
+
+#events .mainBlock .rightBlock .sliderEvents .card .btnCard {
+  background: #F8EFD0;
+  border-radius: 100px;
+  padding: 16px 33px;
+  border: none;
+}
+
+#events .mainBlock .rightBlock .sliderEvents .card .btnCard i {
+  margin-left: 8px;
+}
+
+
+/* ** NUMBERS ** */
+
+#numbers {
+  margin: 80px 0;
+}
+
+#numbers h1 {
+  display: flex;
+  justify-content: center;
+}
+
+#numbers .mainBlock {
+  padding-top: 61px;
+  background: url(../img/dgty.png) no-repeat;
+}
+
+#numbers .wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#numbers .mainBlock .rightBlock {
+  width: 49%;
+}
+
+#numbers .mainBlock .textRight {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 26px;
+  text-align: justify;
+  color: #383838;
+}
+
+#numbers .wrapper .rightBlock .listOfAwards {
+  display: flex;
+  margin-top: 74px;
+}
+
+#numbers .wrapper .rightBlock .listOfAwards .item {
+  margin-right: 64px;
+  display: flex;
+  flex-direction: column;
+}
+
+#numbers .wrapper .rightBlock .listOfAwards img {
+  width: max-content;
+}
+
+#numbers .wrapper .rightBlock .listOfAwards .item .moreHref {
+  margin: 16px 0 8px;
+}
+
+#numbers .wrapper .rightBlock .allProgress {
+  margin-top: 64px;
+}
+
+#numbers .wrapper .rightBlock .allProgress a {
+  text-decoration: underline;
+  font-family: "Roboto";
+  font-size: 20px;
+  color: black;
+}
+
+/* ** FOOTER ** */
 
 footer {
   background-color: #393939;

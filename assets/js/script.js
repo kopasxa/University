@@ -13,56 +13,117 @@ $(document).ready(function () {
 
   const menuBtnBurger = document.querySelector(".menu-btn__burger");
 
-  $(".tabs li a").click(function() {
-		
-		$(".tabs li a").removeClass("active");
-		$(this).addClass("active");
-		
-		$(".tab_content_container > .tab_content_active").removeClass("tab_content_active").fadeOut(200);
-		$(this.rel).fadeIn(500).addClass("tab_content_active");
-		
-	});	
+  $(".tabs li a").click(function () {
+    $(".tabs li a").removeClass("active");
+    $(this).addClass("active");
 
-// Sliders
-  
+    $(".tab_content_container > .tab_content_active")
+      .removeClass("tab_content_active")
+      .fadeOut(200);
+    $(this.rel).fadeIn(500).addClass("tab_content_active");
+  });
+
+  // Sliders
+
   // 1
   $("#slider1").owlCarousel({
-    loop:true,
-    margin:10,
-    nav:false,
-    responsiveClass:true,
-    items:1,
+    loop: true,
+    margin: 10,
+    nav: false,
+    responsiveClass: true,
+    items: 1,
   });
 
   // 2
 
   $("#slider2").owlCarousel({
-    loop:true,
-    margin:24,
+    loop: true,
+    margin: 24,
     navText: [],
-    nav:true,
-    responsiveClass:true,
-    items:9,
+    nav: true,
+    responsiveClass: true,
+    items: 9,
   });
 
-  // news 
+  // news
 
   $(".sliderNews").owlCarousel({
-    loop:true,
-    margin:25,
-    nav:false,
-    responsiveClass:true,
+    loop: true,
+    margin: 25,
+    nav: true,
+    dots: false,
+    responsiveClass: true,
+    items: 4,
+  });
+
+  // events
+
+  $(".sliderEvents").owlCarousel({
+    loop: true,
+    margin: 24,
+    nav: true,
+    dots: false,
+    responsiveClass: true,
+    items: 3,
+  });
+
+  // big
+
+  $(".slider2Big").owlCarousel({
+    loop: true,
+    margin: 24,
+    nav: false,
+    dots: false,
+    responsiveClass: true,
+    items:4, 
+  });
+
+  $(".slider1Big").owlCarousel({
+    loop: true,
+    margin: 24,
+    nav: false,
+    dots: false,
+    responsiveClass: true,
     items:4,
   });
 
-  // footer 
+  var scrollPos = 3000;
+  $(window).scroll(function () {
+    var st = $(this).scrollTop();
+    if (st > scrollPos) {
+      $(".slider1Big .owl-stage").css("transform", function() {
+        let newStr = "translate3d(-"+scrollPos/5+"px , 0px, 0px)";
+        console.log(newStr);
+        return newStr;
+      });
+      $(".slider2Big .owl-stage").css("transform", function() {
+        let newStr = "translate3d("+((scrollPos/5)-700)+"px , 0px, 0px)";
+        console.log(newStr);
+        return newStr;
+      });
+    } else {
+      $(".slider1Big .owl-stage").css("transform", function() {
+        let newStr = "translate3d(-"+scrollPos/5+"px , 0px, 0px)";
+        console.log(newStr);
+        return newStr;
+      });
+      $(".slider2Big .owl-stage").css("transform", function() {
+        let newStr = "translate3d("+((scrollPos/5)-700)+"px , 0px, 0px)";
+        console.log(newStr);
+        return newStr;
+      });
+    }
+    scrollPos = st;
+  });
+
+  // footer
 
   $("#footerSlide").owlCarousel({
-    loop:true,
-    margin:-50,
+    loop: true,
+    margin: -50,
     navText: [],
-    nav:true,
-    responsiveClass:true,
-    items:4,
+    nav: true,
+    responsiveClass: true,
+    items: 4,
   });
 });
