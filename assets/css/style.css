@@ -414,7 +414,8 @@ a:hover:after {
 }
 
 #news .rightBlock .tab_content .owl-nav,
-#events .mainBlock .rightBlock .sliderEvents .owl-nav {
+#events .mainBlock .rightBlock .sliderEvents .owl-nav,
+#birthDay .owl-nav {
   display: flex !important;
   justify-content: flex-end;
   align-items: center;
@@ -467,7 +468,7 @@ a:hover:after {
 }
 
 #events .mainBlock .rightBlock .sliderEvents .yellowCard {
-  border: 2px solid #F8EFD0;
+  border: 2px solid #f8efd0;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .yellowCard .wrapperDate p {
@@ -480,32 +481,30 @@ a:hover:after {
 }
 
 #events .mainBlock .rightBlock .sliderEvents .noBrownCard {
-  border: 2px solid #ECD1CA;
+  border: 2px solid #ecd1ca;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .noBrownCard .wrapperDate p {
-  background: #CB7755;
+  background: #cb7755;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .noBrownCard .date {
-  border-top: 16px solid #CB7755;
-  border-bottom: 16px solid #CB7755;
+  border-top: 16px solid #cb7755;
+  border-bottom: 16px solid #cb7755;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .brownCard {
-  border: 2px solid #DBCCC5;
+  border: 2px solid #dbccc5;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .brownCard .wrapperDate p {
-  background: #9D6447;
+  background: #9d6447;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .brownCard .date {
-  border-top: 16px solid #9D6447;
-  border-bottom: 16px solid #9D6447;
+  border-top: 16px solid #9d6447;
+  border-bottom: 16px solid #9d6447;
 }
-
-
 
 #events .mainBlock .rightBlock .sliderEvents .card {
   box-sizing: border-box;
@@ -530,7 +529,7 @@ a:hover:after {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 13px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .card .date {
@@ -549,7 +548,7 @@ a:hover:after {
 }
 
 #events .mainBlock .rightBlock .sliderEvents .card .btnCard {
-  background: #F8EFD0;
+  background: #f8efd0;
   border-radius: 100px;
   padding: 16px 33px;
   border: none;
@@ -558,7 +557,6 @@ a:hover:after {
 #events .mainBlock .rightBlock .sliderEvents .card .btnCard i {
   margin-left: 8px;
 }
-
 
 /* ** NUMBERS ** */
 
@@ -624,12 +622,213 @@ a:hover:after {
   color: black;
 }
 
+/* ** BIG SLIDER ** */
+
+#bigSlider {
+  padding: 80px 0;
+}
+
+#bigSlider .owl-carousel {
+  margin-top: 24px;
+}
+
+#bigSlider .owl-carousel .item {
+  position: relative;
+}
+
+#bigSlider .owl-carousel .item:after {
+  content: "";
+  transition: 0.3s linear;
+  opacity: 0;
+}
+
+#bigSlider .owl-carousel .item:hover:after {
+  content: "";
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  background-image: linear-gradient(
+    180deg,
+    rgba(38, 38, 38, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+#bigSlider .item .offer {
+  position: absolute;
+  display: none;
+  bottom: 40px;
+  width: 100%;
+  z-index: 100;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#bigSlider .item .offer p {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 15px;
+  color: #ffffff;
+  margin: 0;
+}
+
+#bigSlider .item .offer .watch {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 15px;
+  color: #1e1d1d;
+  border: none;
+  border-radius: 50px;
+  background-color: white;
+  padding: 12px 28px;
+}
+
+#bigSlider .moreInfo {
+  margin-top: 64px;
+}
+
+#bigSlider .moreInfo button {
+  width: 100%;
+  border: 2px solid #e1e1e1;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 16px;
+  background: transparent;
+  font-weight: bold;
+}
+
+#bigSlider .moreInfo button:focus {
+  outline: none;
+}
+
+#bigSlider .moreInfo button i {
+  margin-left: 16px;
+} 
+
+#bigSlider .rel {
+  position: relative;
+}
+
+#bigSlider .circle2 {
+  position: absolute;
+  right: -30px;
+  top: 75px;
+}
+
+/* ** BIRTH DAY ** */
+
+#birthDay {
+  padding-top: 80px;
+}
+
+#birthDay .headName {
+  display: flex;
+}
+
+#birthDay .headName h1 {
+  margin: 0;
+  margin-left: 24px;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+#birthDay .circles {
+  display: flex;
+  align-items: center;
+}
+
+#birthDay .circles .circle {
+  width: 12px;
+  height: 12px;
+  background: #AEAEAE;
+  opacity: 0.3;
+  border-radius: 50px;
+  margin-right: 12px;
+}
+
+#birthDay .sliderHB {
+  margin-top: 56px;
+}
+
+#birthDay .sliderHB .owl-stage-outer {
+  background: #F7F7F7;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  padding: 69px 62px;
+}
+
+#birthDay .sliderHB .item h6 {
+  font-family: "Roboto";
+  font-size: 20px;
+  color: #000000;
+}
+
+#birthDay .sliderHB .item p {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 15px;
+  color: #000000;
+  margin-top: 24px;
+}
+
+#birthDay .itemsGroup {
+  display: flex;
+  margin: 0 88px;
+  justify-content: space-between;
+}
+
+#birthDay .recomBlock{
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+#birthDay .recomText{
+  font-family: "Roboto";
+  font-size: 20px;
+  color: #000000;
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+
+#birthDay .buttonUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/cirlce2.png) no-repeat;
+  background-position: center;
+  padding: 36px;
+  margin: 42px 0;
+}
+
+#birthDay .buttonUp button {
+  border: none;
+  background: none;
+}
+
+#birthDay .buttonUp button:focus {
+  outline: none;
+}
+
+#birthDay .buttonUp button p {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 15px;
+  color: #000000;
+  
+}
+
 /* ** FOOTER ** */
 
 footer {
   background-color: #393939;
   padding-bottom: 60px;
 }
+
 footer .firstSection {
   display: flex;
   justify-content: space-around;

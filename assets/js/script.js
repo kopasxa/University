@@ -23,6 +23,11 @@ $(document).ready(function () {
     $(this.rel).fadeIn(500).addClass("tab_content_active");
   });
 
+  $("#birthDay .up").on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '400');
+  });
+
   // Sliders
 
   // 1
@@ -67,6 +72,35 @@ $(document).ready(function () {
     items: 3,
   });
 
+  var scrollPos = 3000;
+  $(window).scroll(function () {
+    var st = $(this).scrollTop();
+    if (st > scrollPos) {
+      $(".slider1Big .owl-stage").css("transform", function () {
+        let newStr = "translate3d(-" + scrollPos / 5 + "px , 0px, 0px)";
+        console.log(newStr);
+        return newStr;
+      });
+      $(".slider2Big .owl-stage").css("transform", function () {
+        let newStr = "translate3d(" + (scrollPos / 5 - 900) + "px , 0px, 0px)";
+        console.log(newStr);
+        return newStr;
+      });
+    } else {
+      $(".slider1Big .owl-stage").css("transform", function () {
+        let newStr = "translate3d(-" + scrollPos / 5 + "px , 0px, 0px)";
+        console.log(newStr);
+        return newStr;
+      });
+      $(".slider2Big .owl-stage").css("transform", function () {
+        let newStr = "translate3d(" + (scrollPos / 5 - 900) + "px , 0px, 0px)";
+        console.log(newStr);
+        return newStr;
+      });
+    }
+    scrollPos = st;
+  });
+
   // big
 
   $(".slider2Big").owlCarousel({
@@ -75,7 +109,7 @@ $(document).ready(function () {
     nav: false,
     dots: false,
     responsiveClass: true,
-    items:4, 
+    items: 4,
   });
 
   $(".slider1Big").owlCarousel({
@@ -84,36 +118,26 @@ $(document).ready(function () {
     nav: false,
     dots: false,
     responsiveClass: true,
-    items:4,
+    items: 4,
   });
 
-  var scrollPos = 3000;
-  $(window).scroll(function () {
-    var st = $(this).scrollTop();
-    if (st > scrollPos) {
-      $(".slider1Big .owl-stage").css("transform", function() {
-        let newStr = "translate3d(-"+scrollPos/5+"px , 0px, 0px)";
-        console.log(newStr);
-        return newStr;
-      });
-      $(".slider2Big .owl-stage").css("transform", function() {
-        let newStr = "translate3d("+((scrollPos/5)-700)+"px , 0px, 0px)";
-        console.log(newStr);
-        return newStr;
-      });
-    } else {
-      $(".slider1Big .owl-stage").css("transform", function() {
-        let newStr = "translate3d(-"+scrollPos/5+"px , 0px, 0px)";
-        console.log(newStr);
-        return newStr;
-      });
-      $(".slider2Big .owl-stage").css("transform", function() {
-        let newStr = "translate3d("+((scrollPos/5)-700)+"px , 0px, 0px)";
-        console.log(newStr);
-        return newStr;
-      });
+  $("#bigSlider .item").hover(
+    function () {
+      $(this).find(".offer").fadeIn(100).css("display", "flex");
+    },
+    function () {
+      $(this).find(".offer").fadeOut(100).css("display", "none");
     }
-    scrollPos = st;
+  );
+
+  // happy birthday
+
+  $("#hb").owlCarousel({
+    loop: true,
+    margin: 81,
+    nav: true,
+    responsiveClass: true,
+    items: 6,
   });
 
   // footer
