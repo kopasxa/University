@@ -23,9 +23,9 @@ $(document).ready(function () {
     $(this.rel).fadeIn(500).addClass("tab_content_active");
   });
 
-  $("#birthDay .up").on('click', function(e) {
+  $("#birthDay .up").on("click", function (e) {
     e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '400');
+    $("html, body").animate({ scrollTop: 0 }, "400");
   });
 
   // Sliders
@@ -37,6 +37,7 @@ $(document).ready(function () {
     nav: false,
     responsiveClass: true,
     items: 1,
+    lazyLoad: true
   });
 
   // 2
@@ -44,30 +45,46 @@ $(document).ready(function () {
   $("#slider2").owlCarousel({
     loop: true,
     margin: 24,
-    navText: [],
     nav: true,
     responsiveClass: true,
     items: 9,
+    lazyLoad: true
   });
 
   // news
+
+  var owl2 = $("#news .sliderNewsMain");
+  owl2.owlCarousel({
+    loop: true,
+    margin: 25,
+    dots: false,
+    responsiveClass: true,
+    items: 1,
+    lazyLoad: true
+  });
+
+  $(".customNextBtn").click(function () {
+    owl2.trigger("next.owl.carousel");
+  });
+  $(".customPrevBtn").click(function () {
+    owl2.trigger("prev.owl.carousel", [300]);
+  });
 
   $(".sliderNews").owlCarousel({
     loop: true,
     margin: 25,
     nav: true,
-    dots: false,
+    dots:false,
     responsiveClass: true,
     items: 4,
   });
 
   // events
 
-  $(".sliderEvents").owlCarousel({
+  $("#events .owl-carousel").owlCarousel({
     loop: true,
     margin: 24,
     nav: true,
-    dots: false,
     responsiveClass: true,
     items: 3,
   });
@@ -78,23 +95,19 @@ $(document).ready(function () {
     if (st > scrollPos) {
       $(".slider1Big .owl-stage").css("transform", function () {
         let newStr = "translate3d(-" + scrollPos / 5 + "px , 0px, 0px)";
-        console.log(newStr);
         return newStr;
       });
       $(".slider2Big .owl-stage").css("transform", function () {
         let newStr = "translate3d(" + (scrollPos / 5 - 900) + "px , 0px, 0px)";
-        console.log(newStr);
         return newStr;
       });
     } else {
       $(".slider1Big .owl-stage").css("transform", function () {
         let newStr = "translate3d(-" + scrollPos / 5 + "px , 0px, 0px)";
-        console.log(newStr);
         return newStr;
       });
       $(".slider2Big .owl-stage").css("transform", function () {
         let newStr = "translate3d(" + (scrollPos / 5 - 900) + "px , 0px, 0px)";
-        console.log(newStr);
         return newStr;
       });
     }
@@ -103,7 +116,7 @@ $(document).ready(function () {
 
   // big
 
-  $(".slider2Big").owlCarousel({
+  $("#bigSlider .owl-carousel").owlCarousel({
     loop: true,
     margin: 24,
     nav: false,
@@ -112,14 +125,6 @@ $(document).ready(function () {
     items: 4,
   });
 
-  $(".slider1Big").owlCarousel({
-    loop: true,
-    margin: 24,
-    nav: false,
-    dots: false,
-    responsiveClass: true,
-    items: 4,
-  });
 
   $("#bigSlider .item").hover(
     function () {
@@ -137,7 +142,7 @@ $(document).ready(function () {
     margin: 81,
     nav: true,
     responsiveClass: true,
-    items: 6,
+    items: 5,
   });
 
   // footer

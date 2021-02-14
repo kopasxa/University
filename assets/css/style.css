@@ -283,6 +283,10 @@ a:hover:after {
   margin-top: 22px;
 }
 
+#news .leftBlock {
+  max-width: 400px;
+}
+
 #news .leftBlock .wrapper {
   background: #f7f7f7;
   border-radius: 5px;
@@ -291,6 +295,7 @@ a:hover:after {
   padding-bottom: 65px;
   position: relative;
   overflow: auto;
+  max-width: 400px;
 }
 
 #news .leftBlock .wrapper h2 {
@@ -352,6 +357,17 @@ a:hover:after {
   padding-top: 47px;
 }
 
+#news .wrapperButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#news .wrapperButtons .navsButtons .custom-owl-nav {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
 #news .rightBlock .tabs {
   display: flex;
   list-style: none;
@@ -394,6 +410,10 @@ a:hover:after {
   justify-content: center;
   align-items: center;
 }
+
+/* .sliderEvents  {
+  width: 1309px;
+} */
 
 #news .rightBlock .tab_content .mainBlock .left h1 {
   font-family: "Roboto";
@@ -753,13 +773,22 @@ a:hover:after {
 
 #birthDay .sliderHB {
   margin-top: 56px;
-}
-
-#birthDay .sliderHB .owl-stage-outer {
   background: #F7F7F7;
   border-radius: 5px;
   margin-bottom: 16px;
   padding: 69px 62px;
+  position: static;
+}
+
+#birthDay .wrapperSlider {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+#birthDay .sliderHB .owl-nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 #birthDay .sliderHB .item h6 {
