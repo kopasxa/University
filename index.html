@@ -34,8 +34,8 @@
                     <div class="logo ml-5">
                         <img src="assets/img/logo.png" alt="logo">
                     </div>
-                    <nav class="">
-                        <ul class="menu d-flex ">
+                    <nav class="nav">
+                        <ul class="menu">
                             <li class="item"><a href="#">Об университете</a></li>
                             <li class="item"><a href="#">Факультеты</a></li>
                             <li class="item"><a href="#">Центры и НИИ</a></li>
@@ -230,12 +230,18 @@
 
                 <div class="mainWrapper">
                     <div class="wrapperButtons">
-                        <ul class="tabs">
-                            <li><a href="javascript:void(0);" rel="#tabcontent1" class="tab active">Главные новости</a>
-                            </li>
-                            <li><a href="javascript:void(0);" rel="#tabcontent2" class="tab">В центре внимания</a></li>
-                            <li><a href="javascript:void(0);" rel="#tabcontent3" class="tab">Достижения</a></li>
-                        </ul>
+                        <div class="wrapperFirst">
+                            <div class="btn-menu-news">
+                                <div class="menu-btn__burger">
+                                </div>
+                            </div>
+                            <ul class="tabs">
+                                <li><a href="javascript:void(0);" rel="#tabcontent1" class="tab active">Главные новости</a>
+                                </li>
+                                <li><a href="javascript:void(0);" rel="#tabcontent2" class="tab">В центре внимания</a></li>
+                                <li><a href="javascript:void(0);" rel="#tabcontent3" class="tab">Достижения</a></li>
+                            </ul>
+                        </div>
                         <div class="navsButtons prettyArrow">
                             <div class="custom-owl-nav owl-nav">
                                 <div class="customPrevBtn owl-prev"></div>
@@ -549,8 +555,10 @@
             <div class="mainBlock">
                 <div class="leftBlock">
                     <img src="assets/img/cross.png" alt="cross">
-                    <h3>События</h3>
-                    <a href="#">Все события</a>
+                    <div class="wrapper">
+                        <h3>События</h3>
+                        <a href="#">Все события</a>
+                    </div>
                 </div>
                 <div class="rightBlock w-77">
                     <div class="sliderEvents prettyArrow owl-carousel owl-theme" id="eventsSlider">
@@ -600,10 +608,10 @@
     </section>
 
     <section id="numbers">
-        <div class="">
-            <h1><b>Университет в цифрах</b></h1>
+        <div class="bigWrapper">
             <div class="mainBlock">
                 <div class="container">
+                    <h1><b>Университет в цифрах</b></h1>
                     <div class="wrapper">
                         <div class="rightBlock">
                             <p class="textRight">ДГТУ - часть научной и инновационной структуры Республики Дагестан и
@@ -761,27 +769,27 @@
             </div>
 
             <div class="itemsGroup">
-                <div class="column1">
+                <div class="column">
                     <div class="recomBlock">
                         <img src="assets/img/icons/preFooter1.png" alt="">
-                        <p class="recomText">Рекомендации по защите <br> персональных данных</p>
+                        <p class="recomText">Рекомендации по защите персональных данных</p>
                     </div>
                     <div class="recomBlock">
                         <img src="assets/img/icons/preFooter4.png" alt="">
-                        <p class="recomText">Социальная и воспитательная <br> работа</p>
+                        <p class="recomText">Социальная и воспитательная работа</p>
                     </div>
                 </div>
-                <div class="column2">
+                <div class="column">
                     <div class="recomBlock">
                         <img src="assets/img/icons/preFooter2.png" alt="">
-                        <p class="recomText">Противодействие <br> коррупции</p>
+                        <p class="recomText">Противодействие коррупции</p>
                     </div>
                     <div class="recomBlock">
                         <img src="assets/img/icons/preFooter5.png" alt="">
-                        <p class="recomText"> Международное <br> сотрудничество</p>
+                        <p class="recomText"> Международное сотрудничество</p>
                     </div>
                 </div>
-                <div class="column3">
+                <div class="column">
                     <div class="recomBlock">
                         <img src="assets/img/icons/preFooter3.png" alt="">
                         <p class="recomText">COVID-19</p>

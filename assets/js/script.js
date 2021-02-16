@@ -11,7 +11,23 @@ $(document).ready(function () {
     }
   });
 
-  const menuBtnBurger = document.querySelector(".menu-btn__burger");
+  const menuBtnBurger = document.querySelector(".menu-btn .menu-btn__burger");
+
+
+
+  const menuBtnNews = document.querySelector(".btn-menu-news");
+  let menuOpenNews = false;
+  menuBtnNews.addEventListener("click", () => {
+    if (!menuOpenNews) {
+      menuBtnNews.classList.add("open");
+      menuOpenNews = true;
+    } else {
+      menuBtnNews.classList.remove("open");
+      menuOpenNews = false;
+    }
+  });
+
+  const menuBtnBurgerNews = document.querySelector(".btn-menu-news .menu-btn__burger");
 
   $(".tabs li a").click(function () {
     $(".tabs li a").removeClass("active");
@@ -116,6 +132,7 @@ $(document).ready(function () {
     loop: true,
     margin: 24,
     nav: true,
+    dots: false,
     responsiveClass: true,
     responsive: {
       768: {

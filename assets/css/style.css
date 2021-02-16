@@ -120,7 +120,7 @@ a:hover:after {
 
 /* * BURGER * */
 
-.menu-btn {
+.menu-btn, .btn-menu-news {
   position: relative;
   display: flex;
   justify-content: center;
@@ -130,15 +130,15 @@ a:hover:after {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
-.menu-btn__burger {
+.menu-btn .menu-btn__burger, .btn-menu-news .menu-btn__burger {
   width: 22px;
   height: 3px;
   background-color: #060606;
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
-.menu-btn__burger::before,
-.menu-btn__burger::after {
+.menu-btn .menu-btn__burger::before, .btn-menu-news .menu-btn__burger::before,
+.menu-btn .menu-btn__burger::after, .btn-menu-news .menu-btn__burger::after {
   content: "";
   position: absolute;
   width: 22px;
@@ -147,22 +147,23 @@ a:hover:after {
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
-.menu-btn__burger::before {
+.menu-btn .menu-btn__burger::before, .btn-menu-news .menu-btn__burger::before {
   transform: translateY(-7px);
 }
-.menu-btn__burger::after {
+.menu-btn .menu-btn__burger::after, .btn-menu-news .menu-btn__burger::after {
   transform: translateY(7px);
 }
 
-.menu-btn.open .menu-btn__burger {
+.menu-btn.open .menu-btn__burger, .btn-menu-news.open .menu-btn__burger {
   transform: translateX(-50px);
   background: transparent;
   box-shadow: none;
 }
-.menu-btn.open .menu-btn__burger::before {
+.menu-btn.open .menu-btn__burger::before, .btn-menu-news.open .menu-btn__burger::before {
   transform: rotate(45deg) translate(35px, -35px);
 }
-.menu-btn.open .menu-btn__burger::after {
+
+.menu-btn.open .menu-btn__burger::after, .btn-menu-news.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
@@ -200,10 +201,14 @@ a:hover:after {
   background: #005fa1 !important;
 }
 
+.sliderScreen1 .item {
+  align-items: center;
+  display: flex;
+}
+
 .sliderScreen1 .item .offer {
   font-family: "Montserrat";
   position: absolute;
-  margin-top: 14%;
   margin-left: 7%;
 }
 
@@ -288,6 +293,7 @@ a:hover:after {
 }
 
 #news .leftBlock {
+  position: relative;
   max-width: 400px;
 }
 
@@ -348,6 +354,7 @@ a:hover:after {
 #news .leftBlock .newsCircle {
   margin-left: 172px;
   margin-top: 62px;
+  position: absolute;
 }
 
 .tab_content {
@@ -364,6 +371,14 @@ a:hover:after {
 #news .wrapperButtons {
   display: flex;
   justify-content: space-between;
+}
+
+#news .wrapperButtons .wrapperFirst {
+  display: flex;
+}
+
+#news .wrapperButtons .wrapperFirst .btn-menu-news {
+  display: none;
 }
 
 #news .wrapperButtons .navsButtons .custom-owl-nav {
@@ -558,9 +573,9 @@ a:hover:after {
 
 #events .mainBlock .rightBlock .sliderEvents .card .date {
   top: 0;
-  right: 0;
+  right: -11px;
   position: absolute;
-  border-right: 12px solid white;
+  border-right: 12px solid transparent;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .card .mainText {
@@ -591,11 +606,12 @@ a:hover:after {
 #numbers h1 {
   display: flex;
   justify-content: center;
+  margin-bottom: 60px;
 }
 
 #numbers .mainBlock {
-  padding-top: 61px;
   background: url(../img/dgty.png) no-repeat;
+  background-position-y: 75px;
 }
 
 #numbers .wrapper {
@@ -732,7 +748,7 @@ a:hover:after {
 
 #bigSlider .moreInfo button i {
   margin-left: 16px;
-} 
+}
 
 #bigSlider .rel {
   position: relative;
@@ -769,7 +785,7 @@ a:hover:after {
 #birthDay .circles .circle {
   width: 12px;
   height: 12px;
-  background: #AEAEAE;
+  background: #aeaeae;
   opacity: 0.3;
   border-radius: 50px;
   margin-right: 12px;
@@ -777,7 +793,7 @@ a:hover:after {
 
 #birthDay .sliderHB {
   margin-top: 56px;
-  background: #F7F7F7;
+  background: #f7f7f7;
   border-radius: 5px;
   margin-bottom: 16px;
   padding: 69px 62px;
@@ -815,17 +831,19 @@ a:hover:after {
   justify-content: space-between;
 }
 
-#birthDay .recomBlock{
+#birthDay .recomBlock {
   display: flex;
   align-items: center;
   margin-top: 40px;
 }
-#birthDay .recomText{
+
+#birthDay .recomText {
   font-family: "Roboto";
   font-size: 20px;
   color: #000000;
   margin-left: 24px;
   margin-bottom: 0;
+  max-width: 260px;
 }
 
 #birthDay .buttonUp {
@@ -852,7 +870,6 @@ a:hover:after {
   font-weight: 500;
   font-size: 15px;
   color: #000000;
-  
 }
 
 /* ** FOOTER ** */

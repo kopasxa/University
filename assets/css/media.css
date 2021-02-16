@@ -1,21 +1,36 @@
 @media screen and (max-width: 1920px) {
-  .rightHeader{
+  /* .rightHeader{
     margin-left: 300px;
-  }
+  } */
 }
-/*Header 1440*/
+/*1440*/
 
 @media screen and (max-width: 1440px) {
-  .sliderScreen1 .item img {
-    width: auto;
-  } 
-
-  .sliderScreen1 .owl-stage-outer {
-    border-radius: 60px 0 0 60px;
+  .container {
+    width: 97%;
   }
 
-  nav {
-    width: 910px;
+  .container-slide {
+    margin-left: 3%;
+  }
+
+  header .wrapperHead .menu {
+    padding-left: 5px;
+  }
+
+  #bigSlider .circle2 {
+    right: 0;
+    top: 120px;
+  }
+
+  .sliderScreen1 .item img {
+    margin-left: -3px;
+    width: auto;
+    margin-bottom: -1px;
+  } 
+
+  #events .mainBlock .leftBlock img {
+    left: -17px;
   }
 
   .icons {
@@ -42,12 +57,13 @@
     margin-left: 0;
   }
 
-  nav{
-    width: 850px;
-  }
-
   .ml-5{
     margin-left: 0px;
+  }
+
+  #numbers .mainBlock {
+    background-size: 53%;
+    background-position-y: center;
   }
 }
 
@@ -67,12 +83,59 @@
   #news .rightBlock {
     width: 100%; 
   }
+
+  #events .mainBlock {
+    justify-content: flex-start;
+    flex-wrap: wrap;  
+  }
+
+  #events .mainBlock .rightBlock {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  #events .mainBlock .leftBlock {
+    align-items: flex-start;
+  }
+
+  #events .mainBlock .leftBlock .wrapper {
+    margin-left: 70px;
+  }
+
+  .wrapperHead .leftHeader .menu li a {
+    font-size: 12px;
+  }
+
+  #birthDay .recomText {
+    font-size: 14px;
+  }
+
+  #birthDay .itemsGroup {
+    margin: 0 0;
+  }
+
+  #news .wrapperButtons .wrapperFirst .btn-menu-news {
+    display: flex;
+  }
+
+  .sliderScreen1 .item .offer button {
+    margin-left: 30px;
+  }
 }
 
-/*Header 1024*/
+/*1024*/
 
 
 @media screen and (max-width: 1024px) {
+  header nav {
+    display: none;
+  }
+
+  .sliderScreen1 .item .offer h1 {
+    font-size: 36px;
+    max-width: 450px;
+  }
+
   .wrapperHead .leftHeader .menu{
     padding-left: 0px;
   }
@@ -92,6 +155,47 @@
   .logoImg{
     width: 79px;
   }
+
+  #numbers .mainBlock .rightBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #numbers h1 {
+    padding-top: 110px;
+    padding-bottom: 50px;
+    justify-content: flex-start;
+  }
+
+  #numbers .mainBlock {
+    background-size: 46%;
+    background-position-y: 0;
+  }
+
+  #birthDay .itemsGroup {
+      flex-direction: column;
+  }
+
+  #birthDay .itemsGroup .column {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 60px;
+  }
+
+  #birthDay .recomBlock {
+    width: -webkit-fill-available;
+  }
+
+  #birthDay .recomText {
+    max-width: 190px;
+  }
+
+  .sliderScreen1 .item .offer button {
+    margin-left: 10px;
+  }
 }
 
 /*Header 768*/
@@ -101,8 +205,66 @@
     display: none;
   }
 
+  .sliderScreen1 .item .offer h1 {
+    font-size: 24px;
+    max-width: 300px;
+  }
+
   .wrapperHead .rightHeader {
     margin-left: 70px;
+  }
+
+  .sliderScreen1 .item .offer button {
+    margin-left: 0px;
+    margin-top: 7px;
+  }
+
+  .sliderScreen1 .item img  {
+    width: 150%;
+  }
+
+  #numbers .mainBlock {
+    background-size: 80%;
+    background-position-x: center;
+    background-position-y: 0;
+  }
+
+  #numbers h1 {
+    max-width: 300px;
+    padding-top: 86px;
+    padding-bottom: 12px;
+  }
+
+  #numbers .wrapper .rightBlock .listOfAwards {
+    display: flex;
+    margin-top: 54px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    padding-left: 10%;
+  }
+
+  #numbers .wrapper .rightBlock .listOfAwards .item {
+    margin-right: 33px;
+    margin-top: 14px;
+  }
+
+  #birthDay .itemsGroup .column {
+    flex-direction: column;
+  }
+
+  footer .firstSection {
+    flex-wrap: wrap;
+  }
+
+  footer .footerInfor {
+    margin-top: 40px;
+    width: 50%;
+  }
+
+  footer .leftLine:nth-last-child(2) {
+    border: none;
+    padding-left: 0;
   }
 }
 
@@ -111,6 +273,10 @@
 @media screen and (max-width: 414px) {
   .wrapperHead .rightHeader {
     margin-left: 20px;
+  }
+
+  .sliderScreen1 .item .offer h1 {
+    font-size: 18px;
   }
 }
 
