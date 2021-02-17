@@ -24,7 +24,7 @@
   }
 
   .sliderScreen1 .item img {
-    margin-left: -3px;
+    margin-left: -2px;
     width: auto;
     margin-bottom: -1px;
   } 
@@ -84,6 +84,15 @@
     width: 100%; 
   }
 
+  #news .rightBlock .tab_content .mainBlock .left {
+    padding: 55px;
+  }
+
+  #news .rightBlock .tab_content .mainBlock .right img {
+    height: -webkit-fill-available;
+    object-fit: cover;
+  }
+
   #events .mainBlock {
     justify-content: flex-start;
     flex-wrap: wrap;  
@@ -126,7 +135,7 @@
 /*1024*/
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1080px) {
   header nav {
     display: none;
   }
@@ -148,7 +157,7 @@
     font-size: 14px;
   }
 
-  nav{
+  nav {
     width: 650px;
   }
 
@@ -196,6 +205,18 @@
   .sliderScreen1 .item .offer button {
     margin-left: 10px;
   }
+
+  #news .rightBlock .tab_content .mainBlock .left h1 {
+    font-size: 24px;
+  }
+
+  #news .rightBlock .tab_content .mainBlock .left p {
+    font-size: 12px;
+  }
+
+  #bigSlider .circle2 {
+    display: none;
+  }
 }
 
 /*Header 768*/
@@ -214,6 +235,10 @@
     margin-left: 70px;
   }
 
+  .wrapperHead .leftHeader .leftHeader .logo img {
+    width: 80%;
+  }
+
   .sliderScreen1 .item .offer button {
     margin-left: 0px;
     margin-top: 7px;
@@ -221,6 +246,19 @@
 
   .sliderScreen1 .item img  {
     width: 150%;
+  }
+
+  #news .rightBlock .tab_content .mainBlock .left h1 {
+    font-size: 18px;
+    line-height: normal;
+  }
+
+  #news .rightBlock .tab_content .mainBlock .left {
+    width: 85%;
+  }
+
+  #news .rightBlock .tabs li {
+    margin-right: 15px;
   }
 
   #numbers .mainBlock {
@@ -253,6 +291,14 @@
     flex-direction: column;
   }
 
+  #events .mainBlock .rightBlock .sliderEvents .card .btnCard {
+    font-size: 12px;
+  }
+
+  #events .mainBlock .rightBlock .sliderEvents .card .mainText {
+    font-size: 16px;
+  }
+
   footer .firstSection {
     flex-wrap: wrap;
   }
@@ -268,23 +314,123 @@
   }
 }
 
-/*Header 414*/
+@media screen and (max-width: 568px) {
+  #news .wrapperButtons {
+    flex-direction: column;
+  }
+
+  #news .wrapperButtons .navsButtons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #events .mainBlock .rightBlock .sliderEvents .card {
+    padding: 42px 0 57px;
+  } 
+
+  #events .mainBlock .rightBlock .sliderEvents .card .wrapperMain {
+    padding: 33px 25px 0;
+  }
+
+  #events .mainBlock .rightBlock .sliderEvents .card .btnCard {
+    padding: 12px 20px;
+  }
+
+  .sliderScreen1 .item .offer button {
+    font-size: 12px;
+    padding: 10px 23px;
+  }
+
+  footer .social {
+    position: absolute;
+    bottom: -10px;
+    width: auto;
+    left: 25%;
+  }
+
+  footer .firstSection {
+    position: relative;
+  }
+
+  .sliderScreen1 .item img {
+    width: 235%;
+  }
+
+  .wrapperHead .leftHeader .logo img {
+    width: 75%;
+    margin-left: 15px;
+  }
+}
+
+/*414*/
 
 @media screen and (max-width: 414px) {
   .wrapperHead .rightHeader {
     margin-left: 20px;
   }
 
+  .sliderScreen1 .owl-dots {
+    bottom: 6%;
+    left: 10%;
+  }
+
   .sliderScreen1 .item .offer h1 {
     font-size: 18px;
   }
+
+  #events .mainBlock .rightBlock .sliderEvents .card .wrapperDate p {
+    font-size: 9px;
+  }
+
+  #events .mainBlock .rightBlock .sliderEvents .card {
+    margin-right: 9px;
+  }
+
+  #birthDay .headName h1 {
+    font-size: 22px;
+  }
+
+  #birthDay .itemsGroup .column {
+    padding: 0 24px;
+  }
 }
 
-/*Header 320*/
+/*375*/
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
   .wrapperHead .rightHeader {
     margin-left: 0px;
+  }
+
+  .sliderScreen1 .owl-dots {
+    bottom: 4%;
+    left: 30%;
+  }
+
+  .sliderScreen1 .item .offer {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 25%;
+    width: -webkit-fill-available;
+    background-color: rgba(255, 255, 255, .5);
+  } 
+
+  .sliderScreen1 .item .offer button {
+    position: absolute;
+    bottom: -50px;
+  }
+
+  .sliderScreen1 .item .offer h1 {
+    text-align: left;
+    max-width: 158px;
+  }
+
+  #events .mainBlock .rightBlock .sliderEvents .date {
+    border-top: 13px solid;
+    border-bottom: 13px solid;
   }
 
   .logoImg{

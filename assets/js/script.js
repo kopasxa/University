@@ -29,8 +29,8 @@ $(document).ready(function () {
 
   const menuBtnBurgerNews = document.querySelector(".btn-menu-news .menu-btn__burger");
 
-  $(".tabs li a").click(function () {
-    $(".tabs li a").removeClass("active");
+  $(".tabs li").click(function () {
+    $(".tabs li").removeClass("active");
     $(this).addClass("active");
 
     $(".tab_content_container > .tab_content_active")
@@ -58,35 +58,37 @@ $(document).ready(function () {
 
   // 2
 
-  $("#slider2").owlCarousel({
-    loop: true,
-    margin: 24,
-    nav: true,
-    dots: false,
-    responsiveClass: true,
-    /* items: 9, */
-    lazyLoad: true,
-    responsive: {
-      1920: {
-        items: 9,
+  new Splide( '.slider2Screen1 .splide', {
+    type   : 'loop',
+    arrowPath: '',
+    perPage: 9,
+    classes: {
+      arrows: 'prettyArrow buttonsSlider2',
+      prev  : 'prev',
+      next  : 'next',
+    },
+    pagination: false,
+    breakpoints: {
+      320: {
+        perPage: 2,
       },
-      1440: {
-        items: 6,
+      375: {
+        perPage: 2,
+      },
+      425: {
+        perPage: 2,
       },
       768: {
-        items: 5,
+        perPage: 3,
       },
-      410: {
-        items: 3,
+      1000: {
+        perPage: 5,
       },
-      320: {
-        items: 2, 
-      },
-      0: {
-        items: 1,
+      1440: {
+        perPage: 6,
       }
-    }
-  });
+    },
+  }).mount();
 
   // news
 
@@ -128,21 +130,22 @@ $(document).ready(function () {
 
   // events
 
-  $("#events .owl-carousel").owlCarousel({
-    loop: true,
-    margin: 24,
-    nav: true,
-    dots: false,
-    responsiveClass: true,
-    responsive: {
+  new Splide( '.sliderEvents .splide', {
+    type   : 'loop',
+    arrowPath: '',
+    perPage: 3,
+    classes: {
+      arrows: 'prettyArrow buttonsSliderEvents',
+      prev  : 'prev',
+      next  : 'next',
+    },
+    pagination: false,
+    breakpoints: {
       768: {
-        items: 3,
+        perPage: 2,
       },
-      0: {
-        items: 2,
-      }
-    }
-  });
+    },
+  }).mount();
 
   var scrollPos = 3000;
   $(window).scroll(function () {
@@ -199,7 +202,30 @@ $(document).ready(function () {
 
   // happy birthday
 
-  $("#hb").owlCarousel({
+  new Splide( '.sliderHB .splide', {
+    type   : 'loop',
+    arrowPath: '',
+    perPage: 5,
+    classes: {
+      arrows: 'prettyArrow buttonsSliderHB',
+      prev  : 'prev',
+      next  : 'next',
+    },
+    pagination: false,
+    breakpoints: {
+      1280: {
+        perPage: 3,
+      },
+      1000: {
+        perPage: 2,
+      },
+      768: {
+        perPage: 1,
+      },
+    },
+  }).mount();
+
+  /* $("#hb").owlCarousel({
     loop: true,
     margin: 81,
     nav: true,
@@ -222,7 +248,7 @@ $(document).ready(function () {
         items: 1,
       },
     },
-  });
+  }); */
 
   // footer
 

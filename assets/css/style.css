@@ -239,22 +239,66 @@ a:hover:after {
   border-radius: 30px;
   padding: 40px 30px;
   font-family: "Montserrat";
+  margin-right: 25px;
 }
 
-.slider2Screen1 {
+.slider2Screen1 .splide, .sliderEvents .splide, .sliderHB .splide {
   margin-top: 50px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
-.slider2Screen1 .owl-nav {
-  display: flex !important;
+.slider2Screen1 .buttonsSlider2 {
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 42px !important;
+  margin-top: 30px;
+}
+
+.sliderEvents .buttonsSliderEvents {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.splide__arrow svg {
+  display: none;
+}
+
+.splide__arrow {
+  position: relative;
+  z-index: 1;
+  transform: translateY(0);
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  opacity: 1;
+  background: #ccc;
 }
 
 .owl-nav .owl-next,
 .owl-nav .owl-prev:focus {
   outline: none;
+}
+
+.next {
+  width: 42px;
+  height: 37px;
+  background: url(../img/arrowRight.png) !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+}
+
+.prev{
+  width: 30px;
+  height: 30px;
+  background: url(../img/arrowLeft.png) !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+  margin-right: 29px;
 }
 
 .prettyArrow .owl-nav .owl-next,
@@ -430,10 +474,6 @@ a:hover:after {
   align-items: center;
 }
 
-/* .sliderEvents  {
-  width: 1309px;
-} */
-
 #news .rightBlock .tab_content .mainBlock .left h1 {
   font-family: "Roboto";
   font-weight: 300;
@@ -515,8 +555,8 @@ a:hover:after {
 }
 
 #events .mainBlock .rightBlock .sliderEvents .yellowCard .date {
-  border-top: 16px solid #ecc951;
-  border-bottom: 16px solid #ecc951;
+  border-top-color: #ecc951;
+  border-bottom-color: #ecc951;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .noBrownCard {
@@ -528,8 +568,8 @@ a:hover:after {
 }
 
 #events .mainBlock .rightBlock .sliderEvents .noBrownCard .date {
-  border-top: 16px solid #cb7755;
-  border-bottom: 16px solid #cb7755;
+  border-top-color: #cb7755;
+  border-bottom-color: #cb7755;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .brownCard {
@@ -541,8 +581,13 @@ a:hover:after {
 }
 
 #events .mainBlock .rightBlock .sliderEvents .brownCard .date {
-  border-top: 16px solid #9d6447;
-  border-bottom: 16px solid #9d6447;
+  border-top-color: #9d6447;
+  border-bottom-color: #9d6447;
+}
+
+#events .mainBlock .rightBlock .sliderEvents .date {
+  border-top: 16px solid;
+  border-bottom: 16px solid;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .card {
@@ -550,6 +595,7 @@ a:hover:after {
   border-radius: 5px;
   padding: 42px 0 80px;
   margin-bottom: 15px;
+  margin-right: 24px;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .card .wrapperMain {
@@ -805,10 +851,19 @@ a:hover:after {
   padding-bottom: 50px;
 }
 
-#birthDay .sliderHB .owl-nav {
+#birthDay .sliderHB .splide {
+  position: static;
+}
+
+#birthDay .sliderHB .item {
+  margin-right: 40px;
+}
+
+#birthDay .sliderHB .buttonsSliderHB {
   position: absolute;
   right: 0;
   bottom: 0;
+  display: flex;
 }
 
 #birthDay .sliderHB .item h6 {
