@@ -55,7 +55,7 @@ header {
   width: 0;
 }
 
-a:after {
+header a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -67,7 +67,8 @@ a:after {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-a:hover:after {
+
+header a:hover:after {
   width: 100%;
   left: 0;
 }
@@ -408,6 +409,20 @@ a:hover:after {
   display: block;
 }
 
+.wrapperButtons .active {
+  position: relative;
+}
+
+.wrapperButtons .active::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #005fa0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
 #news .rightBlock {
   padding-top: 47px;
 }
@@ -454,7 +469,6 @@ a:hover:after {
   font-family: "Roboto";
   font-weight: bold;
   padding-bottom: 12px;
-  border-bottom: 2px solid #005fa0;
 }
 
 #news .rightBlock .tab_content .mainBlock {

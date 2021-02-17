@@ -29,8 +29,8 @@ $(document).ready(function () {
 
   const menuBtnBurgerNews = document.querySelector(".btn-menu-news .menu-btn__burger");
 
-  $(".tabs li").click(function () {
-    $(".tabs li").removeClass("active");
+  $(".tabs li a").click(function () {
+    $(".tabs li a").removeClass("active");
     $(this).addClass("active");
 
     $(".tab_content_container > .tab_content_active")
