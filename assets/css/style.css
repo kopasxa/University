@@ -451,6 +451,7 @@ header a:hover:after {
 
 .headerDopDownNav .menu {
   flex-direction: column;
+  padding: 0;
 }
 
 .wrapperHead .headerDopDownNav .menu li a:after {
