@@ -14,6 +14,50 @@ body {
 
 /* *** HEADER *** */
 
+.deskMenu {
+  position: absolute;
+  width: 100%;
+  padding: 76px 85px;
+  background: white;
+  display: none;
+  z-index: 10;
+}
+
+.deskMenu .rowBlock {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.deskMenu .rowBlock .menuColumn {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.deskMenu .rowBlock .menuColumn h5 {
+  font-size: 17px;
+  font-family: "Roboto";
+  margin-bottom: 16px;
+}
+
+.deskMenu .rowBlock .menuColumn .items {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.deskMenu .rowBlock .menuColumn .items li {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.deskMenu .rowBlock .menuColumn .items li a {
+  font-size: 17px;
+  color: #999999;
+  font-family: "Roboto";
+}
+
 header {
   padding-top: 25px;
 }
@@ -723,9 +767,9 @@ header a:hover:after {
 
 /* ** NUMBERS ** */
 
-#numbers {
+/* #numbers {
   margin: 80px 0;
-}
+} */
 
 #numbers h1 {
   display: flex;

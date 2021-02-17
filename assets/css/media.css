@@ -225,9 +225,14 @@
   .wrapperHead .menu-desktop-btn {
     display: none;
   }
+
+  .headerDopDownNav {
+    top: 59px;
+    left: 33px;
+  }
 }
 
-/*Header 768*/
+/*768*/
 
 @media screen and (max-width: 768px) {
   nav{
@@ -297,6 +302,10 @@
 
   #birthDay .itemsGroup .column {
     flex-direction: column;
+  }
+
+  #birthDay .sliderHB {
+    padding: 24px 24px;
   }
 
   #events .mainBlock .rightBlock .sliderEvents .card .btnCard {
@@ -458,5 +467,9 @@
   footer .siteInfor {
     font-size: 12px;
     width: 88px;
+  }
+
+  footer .social {
+    left: 12%;
   }
 } 
