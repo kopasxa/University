@@ -17,7 +17,7 @@ body {
 .deskMenu {
   position: absolute;
   width: 100%;
-  padding: 76px 85px;
+  padding: 85px 105px;
   background: white;
   display: none;
   z-index: 10;
@@ -267,6 +267,7 @@ header a:hover:after {
 }
 
 .sliderScreen1 .item .offer h1 {
+  font-family: 'Roboto';
   font-weight: 900;
   max-width: 620px;
   font-size: 48px;
@@ -344,18 +345,33 @@ header a:hover:after {
   outline: none;
 }
 
-.next {
-  width: 42px;
-  height: 37px;
+.newNext {
+  width: 42px !important;
+  height: 37px !important;
   background: url(../img/arrowRight.png) !important;
+  transform: rotate( 360deg ) !important;
+}
+
+.newPrev {
+  width: 42px !important;
+  height: 37px !important;
+  background: url(../img/arrowRight.png) !important;
+  transform: rotate(180deg) !important;
+}
+
+.next {
+  width: 30px;
+  height: 30px;
+  background: url(../img/arrowLeft.png);
   background-size: 100% !important;
   background-repeat: no-repeat !important;
+  transform: rotate(180deg);
 }
 
 .prev {
   width: 30px;
   height: 30px;
-  background: url(../img/arrowLeft.png) !important;
+  background: url(../img/arrowLeft.png);
   background-size: 100% !important;
   background-repeat: no-repeat !important;
   margin-right: 29px;
@@ -363,19 +379,18 @@ header a:hover:after {
 
 .prettyArrow .owl-nav .owl-next,
 .prettyArrow .owl-nav .owl-prev {
-  width: 42px;
-  height: 37px;
-  background: url(../img/arrowRight.png) !important;
+  width: 30px;
+  height: 30px;
+  background: url(../img/arrowLeft.png) ;
   background-size: 100% !important;
   background-repeat: no-repeat !important;
 }
 
+.prettyArrow .owl-nav .owl-next {
+  transform: rotate(180deg);
+}
+
 .prettyArrow .owl-nav .owl-prev {
-  width: 30px;
-  height: 30px;
-  background: url(../img/arrowLeft.png) !important;
-  background-size: 100% !important;
-  background-repeat: no-repeat !important;
   margin-right: 29px;
 }
 
@@ -479,8 +494,8 @@ header a:hover:after {
   position: absolute;
 }
 
-.show {
-  display: flex;
+.showBlock {
+  display: flex !important;
 }
 
 .headerDopDownNav {
@@ -541,6 +556,7 @@ header a:hover:after {
 
 #news .wrapperButtons .wrapperFirst {
   position: relative;
+  align-items: center;
   display: flex;
 }
 
@@ -870,10 +886,11 @@ header a:hover:after {
 #bigSlider .item .offer {
   position: absolute;
   display: none;
-  bottom: 40px;
+  bottom: 30%;
   width: 100%;
   z-index: 100;
   justify-content: space-around;
+  padding: 0 20px;
   align-items: center;
 }
 
