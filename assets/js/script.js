@@ -11,8 +11,9 @@ $(document).ready(function () {
     }
   });
 
-  const menuBtnBurger = document.querySelector(".menu-btn .menu-btn__burger");
-
+  menuBtn.onclick = function () {
+    $(".wrapperHead .headerDopDownNav").toggle(".show");
+  }
 
 
   const menuBtnNews = document.querySelector(".btn-menu-news");
@@ -27,7 +28,9 @@ $(document).ready(function () {
     }
   });
 
-  const menuBtnBurgerNews = document.querySelector(".btn-menu-news .menu-btn__burger");
+  menuBtnNews.onclick = function () {
+    $("#news .newsBlock").toggle(".show");
+  }
 
   $(".tabs li a").click(function () {
     $(".tabs li a").removeClass("active");
@@ -144,6 +147,9 @@ $(document).ready(function () {
       768: {
         perPage: 2,
       },
+      320: {
+        perPage: 1,
+      }
     },
   }).mount();
 

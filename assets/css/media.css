@@ -394,6 +394,11 @@
   #birthDay .itemsGroup .column {
     padding: 0 24px;
   }
+
+  #events .mainBlock .rightBlock .sliderEvents .date {
+    border-top: 13px solid;
+    border-bottom: 13px solid;
+  }
 }
 
 /*375*/
@@ -428,12 +433,22 @@
     max-width: 158px;
   }
 
-  #events .mainBlock .rightBlock .sliderEvents .date {
-    border-top: 13px solid;
-    border-bottom: 13px solid;
-  }
-
   .logoImg{
     width: 60px;
   }
+
+  #news .rightBlock .tab_content .mainBlock .left {
+    width: 65%;
+  }
 }
+
+@media screen and (max-width: 320px) {
+  #news .rightBlock .tabs {
+    padding-left: 10px;
+  }
+
+  footer .siteInfor {
+    font-size: 12px;
+    width: 88px;
+  }
+} 
