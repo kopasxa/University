@@ -112,18 +112,24 @@ header a:hover:after {
   outline: none;
 }
 
-.wrapperHead .rightHeader .lang p {
+.wrapperHead .rightHeader .lang {
   margin: 0;
   color: rgba(22, 22, 22, 1);
   font-size: 15px;
-  margin-left: 5px;
   text-decoration: underline;
+}
+
+.wrapperHead .rightHeader .lang img {
+  margin-right: 5px;
 }
 
 /* * BURGER * */
 
-.menu-btn,
-.btn-menu-news {
+.wrapperHead .menu-btn {
+  display: none;
+}
+
+.burger {
   position: relative;
   display: flex;
   justify-content: center;
@@ -132,19 +138,17 @@ header a:hover:after {
   height: 20px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  z-index: 1000;
 }
-.menu-btn .menu-btn__burger,
-.btn-menu-news .menu-btn__burger {
+.burger .menu-btn__burger {
   width: 22px;
   height: 3px;
   background-color: #060606;
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
-.menu-btn .menu-btn__burger::before,
-.btn-menu-news .menu-btn__burger::before,
-.menu-btn .menu-btn__burger::after,
-.btn-menu-news .menu-btn__burger::after {
+.burger .menu-btn__burger::before,
+.burger .menu-btn__burger::after {
   content: "";
   position: absolute;
   width: 22px;
@@ -153,28 +157,23 @@ header a:hover:after {
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
-.menu-btn .menu-btn__burger::before,
-.btn-menu-news .menu-btn__burger::before {
+.burger .menu-btn__burger::before {
   transform: translateY(-7px);
 }
-.menu-btn .menu-btn__burger::after,
-.btn-menu-news .menu-btn__burger::after {
+.burger .menu-btn__burger::after {
   transform: translateY(7px);
 }
 
-.menu-btn.open .menu-btn__burger,
-.btn-menu-news.open .menu-btn__burger {
+.burger.open .menu-btn__burger {
   transform: translateX(-50px);
   background: transparent;
   box-shadow: none;
 }
-.menu-btn.open .menu-btn__burger::before,
-.btn-menu-news.open .menu-btn__burger::before {
+.burger.open .menu-btn__burger::before {
   transform: rotate(45deg) translate(35px, -35px);
 }
 
-.menu-btn.open .menu-btn__burger::after,
-.btn-menu-news.open .menu-btn__burger::after {
+.burger.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
@@ -259,6 +258,10 @@ header a:hover:after {
   margin-top: 50px;
   display: flex;
   flex-direction: column-reverse;
+}
+
+.sliderHB .splide {
+  margin-top: 0;
 }
 
 .slider2Screen1 .buttonsSlider2 {
@@ -441,7 +444,7 @@ header a:hover:after {
   flex-direction: column;
   padding: 10px;
   border: 1px solid rgba(128, 128, 128, 0.212);
-  background: rgba(255, 255, 255, 0.603);
+  background: rgb(255, 255, 255);
   border-radius: 5px;
   position: absolute;
   z-index: 1000;
@@ -563,7 +566,7 @@ header a:hover:after {
   margin-top: 50px;
 }
 
-#news .rightBlock .tab_content #sliderNews2 {
+#news .rightBlock .tab_content .sliderNews2 {
   margin-top: 40px;
 }
 
@@ -995,7 +998,7 @@ header a:hover:after {
   outline: none;
 }
 
-#birthDay .buttonUp button p {
+#birthDay .buttonUp button {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 15px;

@@ -217,6 +217,14 @@
   #bigSlider .circle2 {
     display: none;
   }
+
+  .wrapperHead .menu-btn {
+    display: flex;
+  }
+
+  .wrapperHead .menu-desktop-btn {
+    display: none;
+  }
 }
 
 /*Header 768*/
