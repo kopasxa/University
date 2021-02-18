@@ -249,7 +249,7 @@
 /*768*/
 
 @media screen and (max-width: 768px) {
-  nav{
+  nav {
     display: none;
   }
 
@@ -357,6 +357,10 @@
     display: none;
   }
 
+  #numbers h1 {
+    margin-bottom: 30px;
+  }
+
   footer .siteInfor {
     font-size: 14px;
   }
@@ -415,6 +419,12 @@
   }
 }
 
+@media screen and (max-width: 495px) {
+  #events .mainBlock .rightBlock .sliderEvents .card {
+    margin-right: 0px;
+  }
+}
+
 /*414*/
 
 @media screen and (max-width: 414px) {
@@ -454,6 +464,10 @@
 
   #numbers .mainBlock .textRight {
     font-size: 14px; 
+  }
+
+  #numbers .mainBlock {
+    background-position: 50% 30px;
   }
 }
 

@@ -771,10 +771,16 @@ header a:hover:after {
 }
 
 #events .mainBlock .rightBlock .sliderEvents .card .btnCard {
+  display: flex;
+  align-items: center;
   background: #f8efd0;
   border-radius: 100px;
   padding: 16px 33px;
   border: none;
+}
+
+#events .mainBlock .rightBlock .sliderEvents .card .btnCard:focus {
+  outline: none;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .card .btnCard i {
