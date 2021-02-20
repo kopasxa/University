@@ -10,16 +10,7 @@ $(document).ready(function () {
     $(".slider2Big").addClass("owl-loaded");
   }, 2000); */
   
-  $(".owl-prev, .next").on( "click", function() {
-    console.log(1);
-    $(".owl-next, .next").removeClass("newNext");
-    $(this).addClass("newPrev");
-  });
-
-  $(".owl-next, .splide__arrow").on( "click", function() {
-    $(".owl-prev, .prev").removeClass("newPrev");
-    $(this).addClass("newNext");
-  });
+  
 
   // header mobile burg
   const menuBtn = document.querySelector(".menu-btn");
@@ -85,6 +76,14 @@ $(document).ready(function () {
   $("#birthDay .up").on("click", function (e) {
     e.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, "400");
+  });
+
+  $("button.lang").on( "click", function() {
+    $(".subMenuLang").toggleClass("show");
+  });
+
+  $(".searchButton").on( "click", function() {
+    $(".serchBlock").toggleClass("show");
   });
 
   // Sliders
@@ -239,8 +238,6 @@ $(document).ready(function () {
     margin: 24,
     nav: false,
     dots: false,
-/*     touchDrag: false,
-    mouseDrag: false, */
     responsiveClass: false,
   });
 
@@ -288,6 +285,18 @@ $(document).ready(function () {
       },
     },
   }).mount();
+
+  // arrows
+
+  $(".owl-prev, .prev").on( "click", function() {
+    $(".owl-next, .next").removeClass("newNext");
+    $(this).addClass("newPrev");
+  });
+
+  $(".owl-next, .next").on( "click", function() {
+    $(".owl-prev, .prev").removeClass("newPrev");
+    $(this).addClass("newNext");
+  });
 
   // footer
 

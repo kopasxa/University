@@ -253,6 +253,14 @@
     display: none;
   }
 
+  .wrapperHead .rightHeader .serchBlock {
+    display: none;
+    padding: 10px;
+    position: absolute;
+    left: -203px;
+    top: 70px;
+  }
+
   .sliderScreen1 .item .offer h1 {
     font-size: 24px;
     max-width: 300px;
@@ -365,9 +373,6 @@
     font-size: 14px;
   }
 
-  footer .footerSlider .item .wrapper img {
-    width: 17%;
-  }
 }
 
 @media screen and (max-width: 568px) {
@@ -417,11 +422,19 @@
     width: 75%;
     margin-left: 15px;
   }
+
+  footer .footerSlider .item .wrapper img {
+    width: 17%;
+  }
 }
 
 @media screen and (max-width: 495px) {
   #events .mainBlock .rightBlock .sliderEvents .card {
     margin-right: 0px;
+  }
+
+  .wrapperHead .rightHeader .subMenuLang {
+    top: 65px;
   }
 }
 
@@ -468,6 +481,13 @@
 
   #numbers .mainBlock {
     background-position: 50% 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .wrapperHead .rightHeader .serchBlock {
+    left: -83px;
+    top: 63px;
   }
 }
 

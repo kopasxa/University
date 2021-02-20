@@ -135,10 +135,49 @@ header a:hover:after {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .wrapperHead .rightHeader .icons img {
   margin: 0 10px;
+}
+
+.wrapperHead .rightHeader .serchBlock {
+  display: none;
+  padding: 10px;
+  position: absolute;
+  left: -288px;
+  z-index: 10;
+}
+
+.wrapperHead .rightHeader .serchBlock form {
+  display: flex;
+}
+
+.wrapperHead .rightHeader .serchBlock input {
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: 100%;
+  padding: 5px 10px;
+}
+
+.wrapperHead .rightHeader .serchBlock input:focus {
+  outline: none;
+}
+
+.wrapperHead .rightHeader .serchBlock button {
+  border-radius: 5px;
+  background: #005fa1;
+  border: none;
+  color: white;
+  font-family: "Roboto";
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-left: 8px;
+}
+
+.wrapperHead .rightHeader .serchBlock button:focus {
+  outline: none;
 }
 
 .wrapperHead .rightHeader .lang {
@@ -150,6 +189,39 @@ header a:hover:after {
   justify-content: space-between;
   align-items: center;
   margin-left: 32px;
+}
+
+.wrapperHead .rightHeader .subMenuLang {
+  display: none;
+  position: absolute;
+  top: 90px;
+  right: -5px;
+  z-index: 3;
+}
+
+.wrapperHead .rightHeader .subMenuLang .subMenu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: rgb(128 128 128 / 51%) 2px 3px 7px;
+}
+
+.wrapperHead .rightHeader .subMenuLang .subMenu li {
+  margin-top: 6px;
+  padding: 3px 6px;
+}
+
+.wrapperHead .rightHeader .subMenuLang .subMenu a {
+  color: black;
+  font-family: "Roboto";
+  font-size: 14px;
+}
+
+.wrapperHead .rightHeader .subMenuLang .subMenu a::after {
+  display: none !important;
 }
 
 .wrapperHead .rightHeader .lang:focus {
@@ -362,7 +434,7 @@ header a:hover:after {
 .next {
   width: 30px;
   height: 30px;
-  background: url(../img/arrowLeft.png);
+  background: url(../img/arrowLeft.png) ;
   background-size: 100% !important;
   background-repeat: no-repeat !important;
   transform: rotate(180deg);
@@ -371,7 +443,7 @@ header a:hover:after {
 .prev {
   width: 30px;
   height: 30px;
-  background: url(../img/arrowLeft.png);
+  background: url(../img/arrowLeft.png) ;
   background-size: 100% !important;
   background-repeat: no-repeat !important;
   margin-right: 29px;
@@ -385,6 +457,22 @@ header a:hover:after {
   background-size: 100% !important;
   background-repeat: no-repeat !important;
 }
+
+.owl-theme .owl-nav [class*=owl-]:hover, .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+  background: url(../img/arrowLeft.png) ;
+}
+
+/* .owl-theme .owl-nav [class*=owl-]:hover {
+  background: ;
+} */
+
+/* .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+  background: none;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background: none;
+} */
 
 .prettyArrow .owl-nav .owl-next {
   transform: rotate(180deg);
@@ -1009,6 +1097,7 @@ header a:hover:after {
   right: 0;
   bottom: 0;
   display: flex;
+  align-items: center;
 }
 
 #birthDay .sliderHB .item h6 {
