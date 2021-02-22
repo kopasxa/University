@@ -1,17 +1,4 @@
 $(document).ready(function () {
-
-  /* setTimeout(function () {
-    $(".slider1Big").removeClass("owl-loaded");
-    $(".slider2Big").removeClass("owl-loaded");
-  }, 500);
-
-  setTimeout(function () {
-    $(".slider1Big").addClass("owl-loaded");
-    $(".slider2Big").addClass("owl-loaded");
-  }, 2000); */
-  
-  
-
   // header mobile burg
   const menuBtn = document.querySelector(".menu-btn");
   let menuOpen = false;
@@ -27,7 +14,7 @@ $(document).ready(function () {
 
   menuBtn.onclick = function () {
     $(".wrapperHead .headerDopDownNav").toggle(".showBlock");
-  }
+  };
 
   // header desktop burg
   const menuBtnDesk = document.querySelector(".menu-desktop-btn");
@@ -44,7 +31,7 @@ $(document).ready(function () {
 
   menuBtnDesk.onclick = function () {
     $(".deskMenu").toggle(".showBlock");
-  }
+  };
 
   // news burg
   const menuBtnNews = document.querySelector(".btn-menu-news");
@@ -61,7 +48,7 @@ $(document).ready(function () {
 
   menuBtnNews.onclick = function () {
     $("#news .newsBlock").toggle(".showBlock");
-  }
+  };
 
   $(".tabs li a").click(function () {
     $(".tabs li a").removeClass("active");
@@ -78,11 +65,11 @@ $(document).ready(function () {
     $("html, body").animate({ scrollTop: 0 }, "400");
   });
 
-  $("button.lang").on( "click", function() {
+  $("button.lang").on("click", function () {
     $(".subMenuLang").toggleClass("show");
   });
 
-  $(".searchButton").on( "click", function() {
+  $(".searchButton").on("click", function () {
     $(".serchBlock").toggleClass("show");
   });
 
@@ -94,21 +81,19 @@ $(document).ready(function () {
     margin: 24,
     nav: false,
     responsiveClass: true,
+    singleItem: true,
     items: 1,
-    lazyLoad: true
+    lazyLoad: true,
+    autoHeight: true,
   });
 
   // 2
 
-  new Splide( '.slider2Screen1 .splide', {
-    type   : 'loop',
-    arrowPath: '',
+  var slide2 = new Splide(".slider2Screen1 .splide", {
+    type: "loop",
+    arrowPath: "",
     perPage: 9,
-    classes: {
-      arrows: 'prettyArrow buttonsSlider2',
-      prev  : 'prev',
-      next  : 'next',
-    },
+    gap: 25,
     pagination: false,
     breakpoints: {
       320: {
@@ -128,58 +113,234 @@ $(document).ready(function () {
       },
       1440: {
         perPage: 6,
-      }
+      },
     },
   }).mount();
 
   // news
 
-  var owl2 = $("#news .sliderNewsMain");
-  owl2.owlCarousel({
-    loop: true,
-    margin: 25,
-    dots: false,
-    responsiveClass: true,
-    items: 1,
-    lazyLoad: true
-  });
+  var newsSlide = new Splide(".sliderNewsMain .splide", {
+    type: "loop",
+    arrowPath: "",
+    perPage: 1,
+    pagination: false,
+  }).mount();
 
-  $(".customNextBtn").click(function () {
-    owl2.trigger("next.owl.carousel");
-  });
-  $(".customPrevBtn").click(function () {
-    owl2.trigger("prev.owl.carousel", [300]);
-  });
-
-  $(".sliderNews").owlCarousel({
-    loop: true,
-    margin: 25,
-    nav: true,
-    dots:false,
-    responsiveClass: true,
-    responsive: {
-      1920: {
-        items: 4,
+  var primarySlider = new Splide(".sliderNews .splide", {
+    type: "loop",
+    arrowPath: "",
+    gap: 25,
+    perMove: 1,
+    classes: {
+      arrows: "prettyArrow buttonsSlider2",
+      prev: "prev",
+      next: "next",
+    },
+    pagination: false,
+    breakpoints: {
+      320: {
+        perPage: 2,
       },
       768: {
-        items: 3,
+        perPage: 3,
       },
-      0: {
-        items: 2,
-      }
+      1920: {
+        perPage: 4,
+      },
+    },
+  });
+
+  primarySlider.sync(newsSlide).mount();
+
+  new Splide(".sliderNews2 .splide", {
+    type: "loop",
+    arrowPath: "",
+    gap: 25,
+    perMove: 1,
+    classes: {
+      arrows: "prettyArrow buttonsSlider2",
+      prev: "prev",
+      next: "next",
+    },
+    pagination: false,
+    breakpoints: {
+      320: {
+        perPage: 2,
+      },
+      768: {
+        perPage: 3,
+      },
+      1920: {
+        perPage: 4,
+      },
+    },
+  }).mount();
+
+// 2
+
+var newsSlide2 = new Splide(".sliderNewsMain2 .splide", {
+  type: "loop",
+  arrowPath: "",
+  perPage: 1,
+  pagination: false,
+}).mount();
+
+var primarySlider2 = new Splide(".sliderNewsSecondTab2 .splide", {
+  type: "loop",
+  arrowPath: "",
+  gap: 25,
+  perMove: 1,
+  classes: {
+    arrows: "prettyArrow buttonsSlider2",
+    prev: "prev",
+    next: "next",
+  },
+  pagination: false,
+  breakpoints: {
+    320: {
+      perPage: 2,
+    },
+    768: {
+      perPage: 3,
+    },
+    1920: {
+      perPage: 4,
+    },
+  },
+});
+
+primarySlider2.sync(newsSlide2).mount();
+
+new Splide(".sliderNewsThirtyTab2 .splide", {
+  type: "loop",
+  arrowPath: "",
+  gap: 25,
+  perMove: 1,
+  classes: {
+    arrows: "prettyArrow buttonsSlider2",
+    prev: "prev",
+    next: "next",
+  },
+  pagination: false,
+  breakpoints: {
+    320: {
+      perPage: 2,
+    },
+    768: {
+      perPage: 3,
+    },
+    1920: {
+      perPage: 4,
+    },
+  },
+}).mount();
+
+//3
+
+var newsSlide3 = new Splide(".sliderNewsMain3 .splide", {
+  type: "loop",
+  arrowPath: "",
+  perPage: 1,
+  pagination: false,
+}).mount();
+
+var primarySlider3 = new Splide(".sliderNewsSecondTab3 .splide", {
+  type: "loop",
+  arrowPath: "",
+  gap: 25,
+  perMove: 1,
+  classes: {
+    arrows: "prettyArrow buttonsSlider2",
+    prev: "prev",
+    next: "next",
+  },
+  pagination: false,
+  breakpoints: {
+    320: {
+      perPage: 2,
+    },
+    768: {
+      perPage: 3,
+    },
+    1920: {
+      perPage: 4,
+    },
+  },
+});
+
+primarySlider3.sync(newsSlide3).mount();
+
+new Splide(".sliderNewsThirtyTab3 .splide", {
+  type: "loop",
+  arrowPath: "",
+  gap: 25,
+  perMove: 1,
+  classes: {
+    arrows: "prettyArrow buttonsSlider2",
+    prev: "prev",
+    next: "next",
+  },
+  pagination: false,
+  breakpoints: {
+    320: {
+      perPage: 2,
+    },
+    768: {
+      perPage: 3,
+    },
+    1920: {
+      perPage: 4,
+    },
+  },
+}).mount();
+
+//
+
+  $(".customNextBtn").click(function () {
+    var activeTab = $(".tab_content_active").attr('customSlider');
+    if (activeTab == 3) {
+      newsSlide3.go(">");
+    }
+    else if (activeTab == 2) {
+      newsSlide2.go(">");
+    }
+    else if (activeTab == 1) {
+      newsSlide.go(">");
+    }
+  });
+  $(".customPrevBtn").click(function () {
+    var activeTab = $(".tab_content_active").attr('customSlider');
+    if (activeTab == 3) {
+      newsSlide3.go("<");
+    }
+    else if (activeTab == 2) {
+      newsSlide2.go("<");
+    }
+    else if (activeTab == 1) {
+      newsSlide.go("<");
     }
   });
 
+  $(".slider2Screen1 .prev").click(function () {
+    slide2.go("<");
+  });
+  $(".slider2Screen1 .next").click(function () {
+    slide2.go(">");
+  });
+
+
   // events
 
-  new Splide( '.sliderEvents .splide', {
-    type   : 'loop',
-    arrowPath: '',
+  new Splide(".sliderEvents .splide", {
+    type: "loop",
+    arrowPath: "",
     perPage: 3,
+    gap: 25,
+    perMove: 1,
     classes: {
-      arrows: 'prettyArrow buttonsSliderEvents',
-      prev  : 'prev',
-      next  : 'next',
+      arrows: "prettyArrow buttonsSliderEvents",
+      prev: "prev",
+      next: "next",
     },
     pagination: false,
     breakpoints: {
@@ -191,11 +352,11 @@ $(document).ready(function () {
       },
       320: {
         perPage: 1,
-      }
+      },
     },
   }).mount();
 
-  var scrollPos = 3000;
+  var scrollPos = 2000;
   $(window).scroll(function () {
     var st = $(this).scrollTop();
     if (st > scrollPos) {
@@ -241,7 +402,6 @@ $(document).ready(function () {
     responsiveClass: false,
   });
 
-
   $("#bigSlider .owl-item ").hover(
     function () {
       $(this).removeClass("cloned");
@@ -263,14 +423,16 @@ $(document).ready(function () {
 
   // happy birthday
 
-  new Splide( '.sliderHB .splide', {
-    type   : 'loop',
-    arrowPath: '',
+  new Splide(".sliderHB .splide", {
+    type: "loop",
+    arrowPath: "",
     perPage: 5,
+    perMove: 1,
+    gap: 40,
     classes: {
-      arrows: 'prettyArrow buttonsSliderHB',
-      prev  : 'prev',
-      next  : 'next',
+      arrows: "prettyArrow buttonsSliderHB",
+      prev: "prev",
+      next: "next",
     },
     pagination: false,
     breakpoints: {
@@ -288,12 +450,12 @@ $(document).ready(function () {
 
   // arrows
 
-  $(".owl-prev, .prev").on( "click", function() {
+  $(".owl-prev, .prev").on("click", function () {
     $(".owl-next, .next").removeClass("newNext");
     $(this).addClass("newPrev");
   });
 
-  $(".owl-next, .next").on( "click", function() {
+  $(".owl-next, .next").on("click", function () {
     $(".owl-prev, .prev").removeClass("newPrev");
     $(this).addClass("newNext");
   });

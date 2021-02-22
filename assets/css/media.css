@@ -72,6 +72,18 @@
     margin-left: 0;
   } */
 
+  .sliderScreen1 .owl-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0px;
+  }
+
+  .sliderScreen1 .item {
+    height: 500px;
+  }
+
   .wrapperHead .leftHeader .menu{
     padding-left: 15px;
   }
@@ -279,8 +291,9 @@
     margin-top: 7px;
   }
 
-  .sliderScreen1 .item img  {
-    width: 150%;
+  .sliderScreen1 .owl-item img {
+    object-position: -130px;
+    border-radius: 0px 0px 0px 50px;
   }
 
   #news .rightBlock .tab_content .mainBlock .left h1 {
@@ -323,7 +336,10 @@
   }
 
   #birthDay .itemsGroup .column {
-    flex-direction: column;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
   }
 
   #birthDay .sliderHB {
@@ -375,9 +391,24 @@
 
 }
 
+@media screen and (max-width: 600px) {
+  #birthDay .itemsGroup .column {
+    flex-direction: column;
+  }
+
+  #birthDay .itemsGroup .column {
+    justify-content: space-around;
+    padding: 0 60px;
+  }
+}
+
 @media screen and (max-width: 568px) {
   #news .wrapperButtons {
     flex-direction: column;
+  }
+
+  .sliderScreen1 .owl-item img {
+    object-position: -220px;
   }
 
   #news .wrapperButtons .navsButtons {
@@ -414,10 +445,6 @@
     position: relative;
   }
 
-  .sliderScreen1 .item img {
-    width: 235%;
-  }
-
   .wrapperHead .leftHeader .logo img {
     width: 75%;
     margin-left: 15px;
@@ -435,6 +462,10 @@
 
   .wrapperHead .rightHeader .subMenuLang {
     top: 65px;
+  }
+
+  footer .firstSection {
+    margin-bottom: 100px;
   }
 }
 
@@ -481,6 +512,18 @@
 
   #numbers .mainBlock {
     background-position: 50% 30px;
+  }
+
+  .sliderScreen1 .owl-item img {
+    object-position: -184px;
+  }
+
+  .sliderScreen1 .item {
+    height: 349px;
+  }
+
+  .sliderScreen1 .item .offer h1 {
+    max-width: 92px;
   }
 }
 
@@ -547,16 +590,46 @@
 }
 
 @media screen and (max-width: 320px) {
+  /* .sliderScreen1 .item img {
+    width: 312%;
+    visibility: hidden;
+  } */
+  
   #news .rightBlock .tabs {
     padding-left: 10px;
   }
 
+  .sliderScreen1 .item .offer h1 {
+    max-width: 170px;
+  }
+
+  .sliderScreen1 .owl-item img {
+    object-position: -340px;
+  }
+
   footer .siteInfor {
+    font-size: 10px;
+    width: 97px;
+  }
+
+  footer .footerInfor {
+    height: 220px;
+  }
+
+  footer .inSection {
     font-size: 12px;
-    width: 88px;
   }
 
   footer .social {
     left: 12%;
+  }
+
+  #numbers .wrapper .rightBlock .listOfAwards {
+    padding-left: 0;
+    justify-content: space-around;
+  }
+
+  #numbers .wrapper .rightBlock .listOfAwards .item {
+    margin-right: 20px;
   }
 } 

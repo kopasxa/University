@@ -118,6 +118,10 @@ header a:hover:after {
   left: 0;
 }
 
+.splide__slide {
+  padding: 0 1px;
+}
+
 .wrapperHead .leftHeader .menu li {
   margin: 0 14px;
   position: relative;
@@ -339,7 +343,7 @@ header a:hover:after {
 }
 
 .sliderScreen1 .item .offer h1 {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: 900;
   max-width: 620px;
   font-size: 48px;
@@ -366,7 +370,17 @@ header a:hover:after {
   border-radius: 30px;
   padding: 40px 30px;
   font-family: "Montserrat";
-  margin-right: 25px;
+}
+
+.splide__slide img {
+  vertical-align: bottom;
+  height: 100%;
+  width: 100%;
+}
+
+.slider2Screen1 a {
+  text-decoration: none;
+  color: black;
 }
 
 .slider2Screen1 .splide,
@@ -421,7 +435,7 @@ header a:hover:after {
   width: 42px !important;
   height: 37px !important;
   background: url(../img/arrowRight.png) !important;
-  transform: rotate( 360deg ) !important;
+  transform: rotate(360deg) !important;
 }
 
 .newPrev {
@@ -434,7 +448,7 @@ header a:hover:after {
 .next {
   width: 30px;
   height: 30px;
-  background: url(../img/arrowLeft.png) ;
+  background: url(../img/arrowLeft.png);
   background-size: 100% !important;
   background-repeat: no-repeat !important;
   transform: rotate(180deg);
@@ -443,7 +457,7 @@ header a:hover:after {
 .prev {
   width: 30px;
   height: 30px;
-  background: url(../img/arrowLeft.png) ;
+  background: url(../img/arrowLeft.png);
   background-size: 100% !important;
   background-repeat: no-repeat !important;
   margin-right: 29px;
@@ -453,13 +467,16 @@ header a:hover:after {
 .prettyArrow .owl-nav .owl-prev {
   width: 30px;
   height: 30px;
-  background: url(../img/arrowLeft.png) ;
+  background: url(../img/arrowLeft.png);
   background-size: 100% !important;
   background-repeat: no-repeat !important;
 }
 
-.owl-theme .owl-nav [class*=owl-]:hover, .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
-  background: url(../img/arrowLeft.png) ;
+.owl-theme .owl-nav [class*="owl-"]:hover,
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot {
+  background: url(../img/arrowLeft.png);
 }
 
 /* .owl-theme .owl-nav [class*=owl-]:hover {
@@ -515,7 +532,8 @@ header a:hover:after {
   max-width: 400px;
 }
 
-#news .leftBlock .wrapper h2, #news .newsBlock h2 {
+#news .leftBlock .wrapper h2,
+#news .newsBlock h2 {
   color: black;
   font-size: 30px;
 }
@@ -534,29 +552,45 @@ header a:hover:after {
   border-radius: 5px;
 }
 
-#news .leftBlock .wrapper .oneNews, #news .newsBlock .oneNews {
+#news .prettyArrow.buttonsSlider2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#news .sliderNews .splide {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#news .leftBlock .wrapper .oneNews,
+#news .newsBlock .oneNews {
   border-top: 1px solid #e9e7e7;
   padding-top: 16px;
   margin-top: 20px;
 }
 
-#news .leftBlock .wrapper .oneNews a, #news .newsBlock .oneNews a {
+#news .leftBlock .wrapper .oneNews a,
+#news .newsBlock .oneNews a {
   text-decoration: none;
 }
 
-#news .leftBlock .oneNews .text, #news .newsBlock .oneNews .text {
+#news .leftBlock .oneNews .text,
+#news .newsBlock .oneNews .text {
   font-size: 15px;
   color: #000000;
   font-weight: 500;
   font-family: "Roboto";
 }
 
-#news .leftBlock .oneNews .date, #news .newsBlock .oneNews .date {
+#news .leftBlock .oneNews .date,
+#news .newsBlock .oneNews .date {
   font-size: 13px;
   color: #918484;
 }
 
-#news .leftBlock .wrapper .btnNews, #news .newsBlock .btnNews {
+#news .leftBlock .wrapper .btnNews,
+#news .newsBlock .btnNews {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -572,7 +606,8 @@ header a:hover:after {
   border-radius: 0px 0px 5px 5px;
 }
 
-#news .leftBlock .wrapper .btnNews:focus, #news .newsBlock .btnNews:focus {
+#news .leftBlock .wrapper .btnNews:focus,
+#news .newsBlock .btnNews:focus {
   outline: none;
 }
 
@@ -613,10 +648,16 @@ header a:hover:after {
 }
 
 .tab_content {
-  display: none;
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
+
 .tab_content_active {
-  display: block;
+  /* display: block; */
+  visibility: visible;
+  width: 100%;
+  height: 100%;
 }
 
 .wrapperButtons .active {
@@ -688,6 +729,10 @@ header a:hover:after {
   margin: 24px 0;
 }
 
+#news .sliderNewsMain .item a {
+  text-decoration: none;
+}
+
 #news .rightBlock .tab_content .mainBlock .left {
   background: #005fa0;
   border-radius: 5px;
@@ -716,6 +761,15 @@ header a:hover:after {
 
 #news .rightBlock .tab_content .sliderNews2 {
   margin-top: 40px;
+}
+
+#news .rightBlock .tab_content .sliderNews a {
+  text-decoration: none;
+  color: black;
+}
+
+#news .rightBlock .tab_content .sliderNews a .date {
+  color: #a8a6a6;
 }
 
 #news .rightBlock .tab_content .owl-nav,
@@ -821,7 +875,7 @@ header a:hover:after {
   border-radius: 5px;
   padding: 42px 0 80px;
   margin-bottom: 15px;
-  margin-right: 24px;
+  /* margin-right: 24px; */
 }
 
 #events .mainBlock .rightBlock .sliderEvents .card .wrapperMain {
@@ -841,6 +895,10 @@ header a:hover:after {
   font-weight: 500;
   font-size: 13px;
   color: #ffffff;
+}
+
+#events .mainBlock .rightBlock .sliderEvents a {
+  text-decoration: none;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .card .date {
@@ -865,6 +923,7 @@ header a:hover:after {
   border-radius: 100px;
   padding: 16px 33px;
   border: none;
+  color: #5a5a5a;
 }
 
 #events .mainBlock .rightBlock .sliderEvents .card .btnCard:focus {
@@ -980,7 +1039,7 @@ header a:hover:after {
 #bigSlider .item .offer {
   position: absolute;
   display: none;
-  bottom: 30%;
+  bottom: 20%;
   width: 100%;
   z-index: 100;
   justify-content: space-around;
@@ -1079,6 +1138,10 @@ header a:hover:after {
   position: static;
 }
 
+#birthDay .sliderHB a {
+  text-decoration: none;
+}
+
 #birthDay .wrapperSlider {
   position: relative;
   padding-bottom: 50px;
@@ -1088,8 +1151,20 @@ header a:hover:after {
   position: static;
 }
 
-#birthDay .sliderHB .item {
-  margin-right: 40px;
+#sliders .secondSliderButtons {
+  display: flex;
+  width: 140px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#sliders .secondSliderButtons .prev {
+  margin-right: 0;
+}
+
+#sliders .secondSliderButtons img {
+  width: 30px;
+  height: 28px;
 }
 
 #birthDay .sliderHB .buttonsSliderHB {
@@ -1118,6 +1193,10 @@ header a:hover:after {
   display: flex;
   margin: 0 88px;
   justify-content: space-between;
+}
+
+#birthDay .itemsGroup a {
+  text-decoration: none;
 }
 
 #birthDay .recomBlock {
