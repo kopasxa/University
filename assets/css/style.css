@@ -647,17 +647,18 @@ header a:hover:after {
   margin-top: 5px !important;
 }
 
-.tab_content {
-  display: none !important;
-}
+/* .tab_content {
+  display: block;
+} */
 
-.none {
-  display: none !important;
-}
+/* .none {
+  opacity: 0;
+  position: absolute;
+} */
 
-.tab_content_active {
+/* .tab_content_active {
   display: block !important;
-}
+} */
 
 #news .tab_content h1 {
   margin-bottom: 36px;

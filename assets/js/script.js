@@ -50,6 +50,11 @@ $(document).ready(function () {
     $("#news .newsBlock").toggle(".showBlock");
   };
 
+  $(".tab_content").addClass("tab_content_active");
+
+  setTimeout(function(){
+    $(".tabs li a.active").trigger('click');
+  }, 2000);
 
   $(".tabs li a").click(function () {
     $(".tabs li a").removeClass("active");
@@ -73,8 +78,6 @@ $(document).ready(function () {
   $(".searchButton").on("click", function () {
     $(".serchBlock").toggleClass("show");
   });
-
-  /*   $(".tab_content").css("display", "none"); */
 
   // Sliders
 
@@ -354,7 +357,7 @@ $(document).ready(function () {
     },
   }).mount();
 
-  var scrollPos = 2000;
+  var scrollPos = 3000;
   $(window).scroll(function () {
     var st = $(this).scrollTop();
     if (st > scrollPos) {
