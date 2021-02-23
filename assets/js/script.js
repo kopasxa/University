@@ -50,6 +50,7 @@ $(document).ready(function () {
     $("#news .newsBlock").toggle(".showBlock");
   };
 
+
   $(".tabs li a").click(function () {
     $(".tabs li a").removeClass("active");
     $(this).addClass("active");
@@ -72,6 +73,8 @@ $(document).ready(function () {
   $(".searchButton").on("click", function () {
     $(".serchBlock").toggleClass("show");
   });
+
+  /*   $(".tab_content").css("display", "none"); */
 
   // Sliders
 
@@ -126,7 +129,7 @@ $(document).ready(function () {
     pagination: false,
   }).mount();
 
-  var primarySlider = new Splide(".sliderNews .splide", {
+  var primarySlider = new Splide(".sliderNewsSecondTab1 .splide", {
     type: "loop",
     arrowPath: "",
     gap: 25,
@@ -152,7 +155,7 @@ $(document).ready(function () {
 
   primarySlider.sync(newsSlide).mount();
 
-  new Splide(".sliderNews2 .splide", {
+  new Splide(".sliderNewsThirtyTab1 .splide", {
     type: "loop",
     arrowPath: "",
     gap: 25,
@@ -176,147 +179,143 @@ $(document).ready(function () {
     },
   }).mount();
 
-// 2
+  // 2
 
-var newsSlide2 = new Splide(".sliderNewsMain2 .splide", {
-  type: "loop",
-  arrowPath: "",
-  perPage: 1,
-  pagination: false,
-}).mount();
+  var newsSlide2 = new Splide(".sliderNewsMain2 .splide", {
+    type: "loop",
+    arrowPath: "",
+    perPage: 1,
+    pagination: false,
+  }).mount();
 
-var primarySlider2 = new Splide(".sliderNewsSecondTab2 .splide", {
-  type: "loop",
-  arrowPath: "",
-  gap: 25,
-  perMove: 1,
-  classes: {
-    arrows: "prettyArrow buttonsSlider2",
-    prev: "prev",
-    next: "next",
-  },
-  pagination: false,
-  breakpoints: {
-    320: {
-      perPage: 2,
+  var primarySlider2 = new Splide(".sliderNewsSecondTab2 .splide", {
+    type: "loop",
+    arrowPath: "",
+    gap: 25,
+    perMove: 1,
+    classes: {
+      arrows: "prettyArrow buttonsSlider2",
+      prev: "prev",
+      next: "next",
     },
-    768: {
-      perPage: 3,
+    pagination: false,
+    breakpoints: {
+      320: {
+        perPage: 2,
+      },
+      768: {
+        perPage: 3,
+      },
+      1920: {
+        perPage: 4,
+      },
     },
-    1920: {
-      perPage: 4,
-    },
-  },
-});
+  });
 
-primarySlider2.sync(newsSlide2).mount();
+  primarySlider2.sync(newsSlide2).mount();
 
-new Splide(".sliderNewsThirtyTab2 .splide", {
-  type: "loop",
-  arrowPath: "",
-  gap: 25,
-  perMove: 1,
-  classes: {
-    arrows: "prettyArrow buttonsSlider2",
-    prev: "prev",
-    next: "next",
-  },
-  pagination: false,
-  breakpoints: {
-    320: {
-      perPage: 2,
+  new Splide(".sliderNewsThirtyTab2 .splide", {
+    type: "loop",
+    arrowPath: "",
+    gap: 25,
+    perMove: 1,
+    classes: {
+      arrows: "prettyArrow buttonsSlider2",
+      prev: "prev",
+      next: "next",
     },
-    768: {
-      perPage: 3,
+    pagination: false,
+    breakpoints: {
+      320: {
+        perPage: 2,
+      },
+      768: {
+        perPage: 3,
+      },
+      1920: {
+        perPage: 4,
+      },
     },
-    1920: {
-      perPage: 4,
-    },
-  },
-}).mount();
+  }).mount();
 
-//3
+  //3
 
-var newsSlide3 = new Splide(".sliderNewsMain3 .splide", {
-  type: "loop",
-  arrowPath: "",
-  perPage: 1,
-  pagination: false,
-}).mount();
+  var newsSlide3 = new Splide(".sliderNewsMain3 .splide", {
+    type: "loop",
+    arrowPath: "",
+    perPage: 1,
+    pagination: false,
+  }).mount();
 
-var primarySlider3 = new Splide(".sliderNewsSecondTab3 .splide", {
-  type: "loop",
-  arrowPath: "",
-  gap: 25,
-  perMove: 1,
-  classes: {
-    arrows: "prettyArrow buttonsSlider2",
-    prev: "prev",
-    next: "next",
-  },
-  pagination: false,
-  breakpoints: {
-    320: {
-      perPage: 2,
+  var primarySlider3 = new Splide(".sliderNewsSecondTab3 .splide", {
+    type: "loop",
+    arrowPath: "",
+    gap: 25,
+    perMove: 1,
+    classes: {
+      arrows: "prettyArrow buttonsSlider2",
+      prev: "prev",
+      next: "next",
     },
-    768: {
-      perPage: 3,
+    pagination: false,
+    breakpoints: {
+      320: {
+        perPage: 2,
+      },
+      768: {
+        perPage: 3,
+      },
+      1920: {
+        perPage: 4,
+      },
     },
-    1920: {
-      perPage: 4,
-    },
-  },
-});
+  });
 
-primarySlider3.sync(newsSlide3).mount();
+  primarySlider3.sync(newsSlide3).mount();
 
-new Splide(".sliderNewsThirtyTab3 .splide", {
-  type: "loop",
-  arrowPath: "",
-  gap: 25,
-  perMove: 1,
-  classes: {
-    arrows: "prettyArrow buttonsSlider2",
-    prev: "prev",
-    next: "next",
-  },
-  pagination: false,
-  breakpoints: {
-    320: {
-      perPage: 2,
+  new Splide(".sliderNewsThirtyTab3 .splide", {
+    type: "loop",
+    arrowPath: "",
+    gap: 25,
+    perMove: 1,
+    classes: {
+      arrows: "prettyArrow buttonsSlider2",
+      prev: "prev",
+      next: "next",
     },
-    768: {
-      perPage: 3,
+    pagination: false,
+    breakpoints: {
+      320: {
+        perPage: 2,
+      },
+      768: {
+        perPage: 3,
+      },
+      1920: {
+        perPage: 4,
+      },
     },
-    1920: {
-      perPage: 4,
-    },
-  },
-}).mount();
+  }).mount();
 
-//
+  //
 
   $(".customNextBtn").click(function () {
-    var activeTab = $(".tab_content_active").attr('customSlider');
+    var activeTab = $(".tab_content_active").attr("customSlider");
     if (activeTab == 3) {
       newsSlide3.go(">");
-    }
-    else if (activeTab == 2) {
+    } else if (activeTab == 2) {
       newsSlide2.go(">");
-    }
-    else if (activeTab == 1) {
+    } else if (activeTab == 1) {
       newsSlide.go(">");
     }
   });
   $(".customPrevBtn").click(function () {
-    var activeTab = $(".tab_content_active").attr('customSlider');
+    var activeTab = $(".tab_content_active").attr("customSlider");
     if (activeTab == 3) {
       newsSlide3.go("<");
-    }
-    else if (activeTab == 2) {
+    } else if (activeTab == 2) {
       newsSlide2.go("<");
-    }
-    else if (activeTab == 1) {
+    } else if (activeTab == 1) {
       newsSlide.go("<");
     }
   });
@@ -327,7 +326,6 @@ new Splide(".sliderNewsThirtyTab3 .splide", {
   $(".slider2Screen1 .next").click(function () {
     slide2.go(">");
   });
-
 
   // events
 

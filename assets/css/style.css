@@ -648,16 +648,19 @@ header a:hover:after {
 }
 
 .tab_content {
-  visibility: hidden;
-  width: 0;
-  height: 0;
+  display: none !important;
+}
+
+.none {
+  display: none !important;
 }
 
 .tab_content_active {
-  /* display: block; */
-  visibility: visible;
-  width: 100%;
-  height: 100%;
+  display: block !important;
+}
+
+#news .tab_content h1 {
+  margin-bottom: 36px;
 }
 
 .wrapperButtons .active {
@@ -729,7 +732,9 @@ header a:hover:after {
   margin: 24px 0;
 }
 
-#news .sliderNewsMain .item a {
+#news .sliderNewsMain .item a,
+#news .sliderNewsMain2 .item a,
+#news .sliderNewsMain3 .item a {
   text-decoration: none;
 }
 
