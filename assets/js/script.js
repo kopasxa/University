@@ -1,4 +1,21 @@
 $(document).ready(function () {
+  var maxSlides;
+
+  function windowSize() {
+    if ($(window).width() <= "320") {
+      maxSlides = 2;
+    } else if ($(window).width() <= "768") {
+      maxSlides = 3;
+    } else if ($(window).width() <= "1920") {
+      maxSlides = 4;
+    } else {
+      maxSlides = 4;
+    }
+    console.log(maxSlides);
+  }
+
+  windowSize();
+
   // header mobile burg
   const menuBtn = document.querySelector(".menu-btn");
   let menuOpen = false;
@@ -52,8 +69,8 @@ $(document).ready(function () {
 
   $(".tab_content").addClass("tab_content_active");
 
-  setTimeout(function(){
-    $(".tabs li a.active").trigger('click');
+  setTimeout(function () {
+    $(".tabs li a.active").trigger("click");
   }, 2000);
 
   $(".tabs li a").click(function () {
@@ -129,6 +146,7 @@ $(document).ready(function () {
     type: "loop",
     arrowPath: "",
     perPage: 1,
+    perMove: 1,
     pagination: false,
   }).mount();
 
@@ -139,8 +157,8 @@ $(document).ready(function () {
     perMove: 1,
     classes: {
       arrows: "prettyArrow buttonsSlider2",
-      prev: "prev",
-      next: "next",
+      prev: "prev clickButtonL",
+      next: "next clickButtonR",
     },
     pagination: false,
     breakpoints: {
@@ -154,9 +172,7 @@ $(document).ready(function () {
         perPage: 4,
       },
     },
-  });
-
-  primarySlider.sync(newsSlide).mount();
+  }).mount();
 
   new Splide(".sliderNewsThirtyTab1 .splide", {
     type: "loop",
@@ -198,8 +214,8 @@ $(document).ready(function () {
     perMove: 1,
     classes: {
       arrows: "prettyArrow buttonsSlider2",
-      prev: "prev",
-      next: "next",
+      prev: "prev clickButtonL",
+      next: "next clickButtonR",
     },
     pagination: false,
     breakpoints: {
@@ -213,9 +229,9 @@ $(document).ready(function () {
         perPage: 4,
       },
     },
-  });
+  }).mount();
 
-  primarySlider2.sync(newsSlide2).mount();
+
 
   new Splide(".sliderNewsThirtyTab2 .splide", {
     type: "loop",
@@ -257,8 +273,8 @@ $(document).ready(function () {
     perMove: 1,
     classes: {
       arrows: "prettyArrow buttonsSlider2",
-      prev: "prev",
-      next: "next",
+      prev: "prev clickButtonL",
+      next: "next clickButtonR",
     },
     pagination: false,
     breakpoints: {
@@ -272,9 +288,11 @@ $(document).ready(function () {
         perPage: 4,
       },
     },
-  });
+  }).mount();
 
-  primarySlider3.sync(newsSlide3).mount();
+  thumb(primarySlider3);
+  thumb(primarySlider2);
+  thumb(primarySlider);
 
   new Splide(".sliderNewsThirtyTab3 .splide", {
     type: "loop",
@@ -301,6 +319,25 @@ $(document).ready(function () {
   }).mount();
 
   //
+
+  async function thumb(sliderObj) {
+    var i = 0;
+    var iTab = 0;
+    sliderObj.on("move", (newIndex3) => {
+      var oldTab = iTab;
+      i++;
+      iTab = newIndex3 + 1;
+      console.log("I: " + i + "\n" + "itab: " + iTab);
+      if (i == maxSlides) {
+        i = 0;
+        if (oldTab <= iTab) {
+          $(".customNextBtn").trigger("click");
+        } else {
+          $(".customPrevBtn").trigger("click");
+        }
+      }
+    });
+  }
 
   $(".customNextBtn").click(function () {
     var activeTab = $(".tab_content_active").attr("customSlider");
