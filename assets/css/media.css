@@ -29,6 +29,11 @@
     margin-bottom: -1px;
   }
 
+  #news .leftBlock .wrapper {
+    padding: 24px 30px;
+    padding-bottom: 65px;
+  }
+
   #events .mainBlock .leftBlock img {
     left: -17px;
   }
@@ -148,7 +153,7 @@
 
 @media screen and (max-width: 1080px) {
   header nav {
-    display: none;
+    display: none !important;
   }
 
   .sliderScreen1 .item .offer h1 {

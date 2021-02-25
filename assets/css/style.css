@@ -60,6 +60,7 @@ body {
 
 header {
   padding-top: 25px;
+  position: relative;
 }
 
 .wrapperHead {
@@ -70,7 +71,7 @@ header {
 .wrapperHead .leftHeader {
   display: flex;
   align-items: center;
-  position: relative;
+  /* position: relative; */
 }
 
 .wrapperHead .leftHeader .menu {
@@ -86,6 +87,126 @@ header {
   text-decoration: none;
   width: 100%;
   left: 0;
+}
+
+header .nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header .nav .menu {
+  height: 100%;
+}
+
+header .nav .menu li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: static;
+}
+
+header .nav .menu li:hover .navDrop {
+  opacity: 1;
+  visibility: visible;
+}
+
+header .navDrop {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: calc(100% + 1px);
+  z-index: 2;
+  visibility: hidden;
+  background-color: #fff;
+  font-size: 14px;
+  padding: 20px 0 40px 0;
+  opacity: 0;
+  transition: all 0.25s ease-out;
+  white-space: normal;
+  box-shadow: 0 3px 3px rgb(216 224 242 / 50%);
+  height: -webkit-fill-available;
+}
+
+header .navDrop .wrapper a::after {
+  content: none !important;
+}
+
+header .navDrop .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .navDrop .wrapper .listItem {
+  display: flex;
+  flex-direction: column;
+}
+
+header .navDrop .wrapper .listItem .list {
+  margin: 0;
+  padding: 0;
+}
+
+header .formSearch .wrapForm {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1c3467;
+  width: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease-out;
+  z-index: 10;
+}
+
+header .formSearch .btnClose {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+header .formSearch .wrapForm:focus {
+  overflow: hidden;
+  outline: none;
+}
+
+header .formSearch .searchButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  z-index: 1;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+header .formSearch .searchButton:focus {
+  outline: none;
+}
+
+header .formSearch input {
+  width: 100%;
+  height: 54px;
+  border: 0;
+  border-bottom: 1px solid #9dabc9;
+  color: #5975b9;
+  transition: all 0.25s ease-out;
+  font-size: 18px;
+  outline: none;
+  text-overflow: ellipsis;
+  padding: 0 35px;
+}
+
+header .formSearch input:focus {
+  overflow: hidden;
+}
+
+header .formSearch .btnClose {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
 }
 
 .wrapperHead .leftHeader .menu li a:after {
@@ -124,7 +245,6 @@ header a:hover:after {
 
 .wrapperHead .leftHeader .menu li {
   margin: 0 14px;
-  position: relative;
   list-style: none;
 }
 
@@ -140,6 +260,10 @@ header a:hover:after {
   justify-content: space-between;
   align-items: center;
   position: relative;
+}
+
+.wrapperHead .rightHeader .icons {
+  display: flex;
 }
 
 .wrapperHead .rightHeader .icons img {
@@ -303,7 +427,11 @@ header a:hover:after {
 }
 
 /* ** SLIDER 1 ** */
-.tab_content_container .splide--nav>.splide__track>.splide__list>.splide__slide.is-active {
+.tab_content_container
+  .splide--nav
+  > .splide__track
+  > .splide__list
+  > .splide__slide.is-active {
   border: none;
 }
 
@@ -384,7 +512,8 @@ header a:hover:after {
   display: none !important;
 }
 
-.slider1Mob414, .slider1Mob320 {
+.slider1Mob414,
+.slider1Mob320 {
   display: none !important;
 }
 
@@ -807,7 +936,7 @@ header a:hover:after {
 }
 
 .w-77 {
-  width: 77%;
+  width: 76%;
 }
 
 /* ** EVENTS ** */
@@ -1051,9 +1180,11 @@ header a:hover:after {
   top: 0;
   left: 0;
   background: transparent;
-  background-image: linear-gradient(180deg,
-      rgba(38, 38, 38, 0) 0%,
-      rgba(0, 0, 0, 1) 100%);
+  background-image: linear-gradient(
+    180deg,
+    rgba(38, 38, 38, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 #bigSlider .item .offer {

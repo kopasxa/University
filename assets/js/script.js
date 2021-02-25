@@ -68,31 +68,45 @@ $(document).ready(function () {
 
   $("#birthDay .up").on("click", function (e) {
     e.preventDefault();
-    $("html, body").animate({
-      scrollTop: 0
-    }, "400");
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      "400"
+    );
   });
 
   $("button.lang").on("click", function () {
     $(".subMenuLang").toggleClass("show");
   });
 
-  $(".searchButton").on("click", function () {
-    $(".serchBlock").toggleClass("show");
+  $(".searchButtonImg").on("click", function () {
+    $(".wrapForm").css({"opacity":"1","width":"100%","visibility":"visible"});
+  });
+
+  $(".formSearch .btnClose").on("click", function () {
+    $(".wrapForm").css({"opacity":"0","width":"auto","visibility":"hidden"});
   });
 
   // Sliders
 
   // 1
-  $("#slider1").owlCarousel({
-    loop: true,
-    margin: 24,
-    nav: false,
-    responsiveClass: true,
-    singleItem: true,
-    items: 1,
-    lazyLoad: true,
-    autoHeight: true,
+  var pkSlider1 = $("#slider1").owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: false,
+      responsiveClass: true,
+      singleItem: true,
+      items: 1,
+      lazyLoad: true,
+      autoHeight: true,
+    });
+
+  $(".sliderScreen1").on("mouseover", function () {
+    pkSlider1.trigger("play.owl.autoplay", [2000]);
+  });
+  $(".sliderScreen1").on("mouseout", function () {
+    pkSlider1.trigger("stop.owl.autoplay");
   });
 
   $("#slider1410").owlCarousel({
@@ -187,8 +201,6 @@ $(document).ready(function () {
   }).mount();
   newsSlide.sync(primarySlider).mount();
 
-
-
   //////////////////////
 
   new Splide(".sliderNewsThirtyTab1 .splide", {
@@ -249,8 +261,6 @@ $(document).ready(function () {
     },
   }).mount();
   newsSlide2.sync(primarySlider2).mount();
-
-
 
   new Splide(".sliderNewsThirtyTab2 .splide", {
     type: "loop",
@@ -450,12 +460,6 @@ $(document).ready(function () {
       $(this).removeClass("active");
     }
   );
-
-  /* $("#bigSlider .owl-item").mouseover(function() {
-    $(this).find(".offer").addClass("showBlock");
-  }).mouseout(function() {
-      $(this).find(".offer").removeClass("showBlock");
-  }); */
 
   // happy birthday
 
