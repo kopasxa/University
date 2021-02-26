@@ -5,15 +5,17 @@ $(document).ready(function () {
   menuBtn.addEventListener("click", () => {
     if (!menuOpen) {
       menuBtn.classList.add("open");
+      $("body").css("overflow","hidden");
       menuOpen = true;
     } else {
       menuBtn.classList.remove("open");
+      $("body").css("overflow","auto");
       menuOpen = false;
     }
   });
 
   menuBtn.onclick = function () {
-    $(".wrapperHead .headerDopDownNav").toggle(".showBlock");
+    $(".wrapperHead .headerDopDownNav").toggleClass("visible");
   };
 
   // header desktop burg

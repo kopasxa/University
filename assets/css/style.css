@@ -59,7 +59,7 @@ body {
 }
 
 header {
-  padding-top: 25px;
+  padding: 25px 0 10px;
   position: relative;
 }
 
@@ -126,6 +126,7 @@ header .navDrop {
   white-space: normal;
   box-shadow: 0 3px 3px rgb(216 224 242 / 50%);
   height: -webkit-fill-available;
+  border-top: 1px solid #d8dce7;
 }
 
 header .navDrop .wrapper a::after {
@@ -145,6 +146,81 @@ header .navDrop .wrapper .listItem {
 header .navDrop .wrapper .listItem .list {
   margin: 0;
   padding: 0;
+}
+
+header .headerDopDownNav .menuContent .wrapForm {
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+  position: relative;
+}
+
+header .headerDopDownNav .menuContent input {
+  width: 100%;
+  height: 54px;
+  border: 0;
+  color: black;
+  border-bottom: 2px solid black;
+  transition: all 0.25s ease-out;
+  font-size: 18px;
+  outline: none;
+  padding: 0 40px 0 70px;
+}
+
+header .headerDopDownNav .menuContent span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  z-index: 1;
+  border: none;
+  font-weight: bold;
+  background: transparent;
+  padding: 0;
+}
+
+header .headerDopDownNav .menuContent input:focus {
+  overflow: hidden;
+}
+
+header .headerDopDownNav .menuContent .buttonSear {
+  position: absolute;
+  border: none;
+  background: transparent;
+  padding: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+header .headerDopDownNav .menuContent .mainMenu {
+  margin-top: 30px;
+}
+
+header .headerDopDownNav .menuContent .menu {
+  display: flex;
+  flex-direction: column;
+}
+
+header .headerDopDownNav .menuContent .menu .item {
+  width: 100%;
+  padding: 20px 0;
+  margin: 0;
+  border-top: 1px solid gray;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+header .headerDopDownNav .menuContent .addBlock {
+  height: 0;
+  visibility: hidden;
+}
+
+header .headerDopDownNav .menuContent .mainMenu .innerMenu {
+  padding: 0;
+  width: 100%;
+  /* height: 0; */
 }
 
 header .formSearch .wrapForm {
@@ -373,6 +449,10 @@ header a:hover:after {
   display: none;
 }
 
+.btn-menu-news {
+  z-index: 50 !important;
+}
+
 .burger {
   position: relative;
   display: flex;
@@ -382,7 +462,7 @@ header a:hover:after {
   height: 20px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .burger .menu-btn__burger {
@@ -424,6 +504,11 @@ header a:hover:after {
 
 .burger.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.visible {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* ** SLIDER 1 ** */
@@ -767,29 +852,29 @@ header a:hover:after {
 }
 
 .headerDopDownNav {
-  display: none;
-  flex-direction: column;
-  padding: 10px;
-  border: 1px solid rgba(128, 128, 128, 0.212);
+  width: 100%;
+  height: 100vh;
   background: rgb(255, 255, 255);
-  border-radius: 5px;
-  position: absolute;
-  z-index: 1000;
-  top: 70px;
-  left: 30px;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s linear;
+  visibility: hidden;
+  color: black;
 }
 
-.headerDopDownNav .menu {
-  flex-direction: column;
-  padding: 0;
+.headerDopDownNav .headerMenu {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.wrapperHead .headerDopDownNav .menu li a:after {
-  bottom: -4px;
-}
-
-.wrapperHead .headerDopDownNav .menu li {
-  margin-top: 5px !important;
+.headerDopDownNav .headerMenu img {
+  width: 24%;
 }
 
 /* .tab_content {
@@ -890,6 +975,7 @@ header a:hover:after {
   margin-right: -3px;
   color: #ffffff;
   width: 60%;
+  padding: 0 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1215,6 +1301,10 @@ header a:hover:after {
   border-radius: 50px;
   background-color: white;
   padding: 12px 28px;
+}
+
+#bigSlider .item .offer .watch:focus {
+  outline: none;
 }
 
 #bigSlider .moreInfo {
