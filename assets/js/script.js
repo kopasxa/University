@@ -1,22 +1,19 @@
 $(document).ready(function () {
   // header mobile burg
   const menuBtn = document.querySelector(".menu-btn");
-  let menuOpen = false;
+  let menuOpen = true;
   menuBtn.addEventListener("click", () => {
-    if (!menuOpen) {
-      menuBtn.classList.add("open");
-      $("body").css("overflow","hidden");
-      menuOpen = true;
-    } else {
-      menuBtn.classList.remove("open");
-      $("body").css("overflow","auto");
-      menuOpen = false;
-    }
+    $("body").css("overflow", "hidden");
   });
 
   menuBtn.onclick = function () {
-    $(".wrapperHead .headerDopDownNav").toggleClass("visible");
+    $(".wrapperHead .headerDopDownNav").addClass("visible");
   };
+
+  $(".menu-btn-mobileMenu").on("click", function () {
+    $("body").css("overflow", "auto");
+    $(".wrapperHead .headerDopDownNav").removeClass("visible");
+  });
 
   // header desktop burg
   const menuBtnDesk = document.querySelector(".menu-desktop-btn");
@@ -68,6 +65,22 @@ $(document).ready(function () {
     $(this.rel).fadeIn(500).addClass("tab_content_active");
   });
 
+
+  let coll = document.getElementsByClassName("headerItem");
+  
+  for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("activeArrow");
+      var content = this.nextSibling.nextSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      }
+      else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    })
+  }
+
   $("#birthDay .up").on("click", function (e) {
     e.preventDefault();
     $("html, body").animate(
@@ -83,26 +96,26 @@ $(document).ready(function () {
   });
 
   $(".searchButtonImg").on("click", function () {
-    $(".wrapForm").css({"opacity":"1","width":"100%","visibility":"visible"});
+    $(".wrapForm").css({ opacity: "1", width: "100%", visibility: "visible" });
   });
 
   $(".formSearch .btnClose").on("click", function () {
-    $(".wrapForm").css({"opacity":"0","width":"auto","visibility":"hidden"});
+    $(".wrapForm").css({ opacity: "0", width: "auto", visibility: "hidden" });
   });
 
   // Sliders
 
   // 1
   var pkSlider1 = $("#slider1").owlCarousel({
-      loop: true,
-      margin: 24,
-      nav: false,
-      responsiveClass: true,
-      singleItem: true,
-      items: 1,
-      lazyLoad: true,
-      autoHeight: true,
-    });
+    loop: true,
+    margin: 24,
+    nav: false,
+    responsiveClass: true,
+    singleItem: true,
+    items: 1,
+    lazyLoad: true,
+    autoHeight: true,
+  });
 
   $(".sliderScreen1").on("mouseover", function () {
     pkSlider1.trigger("play.owl.autoplay", [2000]);

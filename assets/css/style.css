@@ -59,7 +59,7 @@ body {
 }
 
 header {
-  padding: 25px 0 10px;
+  padding: 25px 0 0;
   position: relative;
 }
 
@@ -77,6 +77,7 @@ header {
 .wrapperHead .leftHeader .menu {
   display: flex;
   justify-content: space-between;
+  margin: 0;
 }
 
 .wrapperHead .leftHeader .menu li a:hover {
@@ -106,7 +107,7 @@ header .nav .menu li {
   position: static;
 }
 
-header .nav .menu li:hover .navDrop {
+header .nav .menu li a:hover .navDrop {
   opacity: 1;
   visibility: visible;
 }
@@ -115,7 +116,7 @@ header .navDrop {
   position: absolute;
   width: 100%;
   left: 0;
-  top: calc(100% + 1px);
+  top: 100%;
   z-index: 2;
   visibility: hidden;
   background-color: #fff;
@@ -125,7 +126,7 @@ header .navDrop {
   transition: all 0.25s ease-out;
   white-space: normal;
   box-shadow: 0 3px 3px rgb(216 224 242 / 50%);
-  height: -webkit-fill-available;
+  height: 100%;
   border-top: 1px solid #d8dce7;
 }
 
@@ -193,6 +194,10 @@ header .headerDopDownNav .menuContent .buttonSear {
   right: 0;
 }
 
+header .headerDopDownNav .menuContent .buttonSear:focus {
+  outline: none;
+}
+
 header .headerDopDownNav .menuContent .mainMenu {
   margin-top: 30px;
 }
@@ -212,15 +217,99 @@ header .headerDopDownNav .menuContent .menu .item {
   font-size: 20px;
 }
 
+header .headerDopDownNav .menuContent .headerItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .headerDopDownNav .menuContent .headerItem a {
+  font-size: 17px !important;
+  font-weight: bold;
+}
+
+header .headerDopDownNav .menuContent .headerItem i {
+  cursor: pointer;
+} 
+
+header .headerDopDownNav .menuContent .item a:after {
+  content: none !important;
+}
+
+header .headerDopDownNav .menuContent .wrapperProj {
+  margin-top: 30px;
+}
+
+header .headerDopDownNav .menuContent .wrapperProj .projects {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header .headerDopDownNav .menuContent .wrapperProj .projects .itemProj a {
+  display: flex;
+  align-items: center;
+}
+
+header .headerDopDownNav .menuContent .wrapperProj .projects .itemProj {
+  margin-top: 20px;
+}
+
+header .headerDopDownNav .menuContent .wrapperProj .projects .itemProj a p {
+  margin-left: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+header .headerDopDownNav .menuFooter {
+  padding: 25px 0;
+}
+
+header .headerDopDownNav .menuFooter .socialWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #3F517C;
+  padding-bottom: 30px;
+  margin-bottom: 15px;
+}
+
+header .headerDopDownNav .menuFooter p {
+  color: gray;
+  margin-bottom: 5px;
+}
+
+header .headerDopDownNav .menuFooter a {
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+header .headerDopDownNav .menuFooter a:not(:last-child) {
+  margin-right: 15px;
+}
+
+.arrowDownMenu {
+  transition: .2s linear;
+}
+
+.activeArrow i {
+  transform: rotate(180deg);
+}
+
 header .headerDopDownNav .menuContent .addBlock {
-  height: 0;
-  visibility: hidden;
+  transition: .3s linear;
+  overflow: hidden;
+  max-height: 0;
 }
 
 header .headerDopDownNav .menuContent .mainMenu .innerMenu {
   padding: 0;
   width: 100%;
-  /* height: 0; */
 }
 
 header .formSearch .wrapForm {
@@ -462,7 +551,7 @@ header a:hover:after {
   height: 20px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  z-index: 100;
+  z-index: 88;
 }
 
 .burger .menu-btn__burger {
@@ -863,6 +952,7 @@ header a:hover:after {
   opacity: 0;
   transition: 0.3s linear;
   visibility: hidden;
+  overflow: auto;
   color: black;
 }
 
@@ -870,11 +960,17 @@ header a:hover:after {
   margin-top: 16px;
   width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerDopDownNav .headerMenu a {
+  display: flex;
   justify-content: flex-end;
 }
 
 .headerDopDownNav .headerMenu img {
-  width: 24%;
+  width: 75%;
 }
 
 /* .tab_content {
@@ -1615,4 +1711,6 @@ footer .footerEnd {
 
 footer .inSectionHref {
   color: #857c7c;
+  margin-top: 4px;
+  display: block;
 }
