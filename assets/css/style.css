@@ -598,6 +598,7 @@ header a:hover:after {
 .visible {
   visibility: visible !important;
   opacity: 1 !important;
+  z-index: 100 !important;
 }
 
 /* ** SLIDER 1 ** */
@@ -954,6 +955,7 @@ header a:hover:after {
   visibility: hidden;
   overflow: auto;
   color: black;
+  z-index: -10;
 }
 
 .headerDopDownNav .headerMenu {
