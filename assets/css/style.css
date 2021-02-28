@@ -107,7 +107,7 @@ header .nav .menu li {
   position: static;
 }
 
-header .nav .menu li a:hover .navDrop {
+header .nav .menu li:hover .navDrop {
   opacity: 1;
   visibility: visible;
 }
