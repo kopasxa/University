@@ -242,7 +242,6 @@
     display: none;
   }
 
-
   #bigSlider .item .offer .watch {
     font-size: 13px;
     padding: 7px 15px;
@@ -555,6 +554,10 @@
     left: -83px;
     top: 63px;
   }
+
+  /* .headerDopDownNav .headerMenu img {
+    width: 55%;
+  } */
 }
 
 /*375*/
@@ -613,6 +616,10 @@
 }
 
 @media screen and (max-width: 320px) {
+  /* .headerDopDownNav .headerMenu img {
+    width: 37%;
+  } */
+
   .slider1Mob414 {
     display: none !important;
   }

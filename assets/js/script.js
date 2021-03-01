@@ -66,12 +66,14 @@ $(document).ready(function () {
   });
 
 
-  let coll = document.getElementsByClassName("headerItem");
+  let coll = document.getElementsByClassName("arrowDownMenu");
   
   for (let i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
-      this.classList.toggle("activeArrow");
-      var content = this.nextSibling.nextSibling;
+      let g =  this.parentElement ;
+      console.log(g);
+      g.classList.toggle("activeArrow");
+      var content = g.nextSibling.nextSibling;
       if (content.style.maxHeight) {
         content.style.maxHeight = null;
       }
