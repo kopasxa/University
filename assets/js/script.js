@@ -71,7 +71,6 @@ $(document).ready(function () {
   for (let i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
       let g =  this.parentElement ;
-      console.log(g);
       g.classList.toggle("activeArrow");
       var content = g.nextSibling.nextSibling;
       if (content.style.maxHeight) {
