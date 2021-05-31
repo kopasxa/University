@@ -73,6 +73,12 @@
 }
 
 @media screen and (max-width: 1280px) {
+  #news .rightBlock .tab-pane .mainBlock .left h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
   /* .container {
     margin-left: 0;
   } */
@@ -101,11 +107,11 @@
     width: 100%;
   }
 
-  #news .rightBlock .tab_content .mainBlock .left {
+  #news .rightBlock .tab-pane .mainBlock .left {
     padding: 55px;
   }
 
-  #news .rightBlock .tab_content .mainBlock .right img {
+  #news .rightBlock .tab-pane .mainBlock .right img {
     height: -webkit-fill-available;
     object-fit: cover;
   }
@@ -222,11 +228,11 @@
     margin-left: 10px;
   }
 
-  #news .rightBlock .tab_content .mainBlock .left h1 {
+  #news .rightBlock .tab-pane .mainBlock .left h1 {
     font-size: 24px;
   }
 
-  #news .rightBlock .tab_content .mainBlock .left p {
+  #news .rightBlock .tab-pane .mainBlock .left p {
     font-size: 12px;
   }
 
@@ -295,14 +301,14 @@
     border-radius: 0px 0px 0px 50px;
   }
 
-  #news .rightBlock .tab_content .mainBlock .left h1 {
+  #news .rightBlock .tab-pane .mainBlock .left h1 {
     font-size: 18px;
     line-height: normal;
   }
 
-  #news .rightBlock .tab_content .mainBlock .left {
+  /* #news .rightBlock .tab-pane .mainBlock .left {
     width: 85%;
-  }
+  } */
 
   #news .rightBlock .tabs li {
     margin-right: 15px;
@@ -474,6 +480,15 @@
     display: none;
   }
 
+  #news .rightBlock .mainBlock .left h1 {
+    font-weight: 200 !important;
+  }
+
+  #news .rightBlock .mainBlock .left p {
+    margin-top: 0px;
+    font-weight: 300 !important;
+  }
+
   .sliderScreen1 .item img {
     margin-left: 0px;
   }
@@ -605,9 +620,9 @@
     width: 60px;
   }
 
-  #news .rightBlock .tab_content .mainBlock .left {
-    width: 65%;
-    padding: 21px;
+  #news .rightBlock .tab-pane .mainBlock .left {
+    width: 54%;
+    padding: 15px;
   }
 
   footer .footerSlider .item .wrapper img {
@@ -619,6 +634,10 @@
   /* .headerDopDownNav .headerMenu img {
     width: 37%;
   } */
+
+  #news .rightBlock .tab-pane .mainBlock .left h1 {
+    font-size: 14px;
+  }
 
   .slider1Mob414 {
     display: none !important;

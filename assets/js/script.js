@@ -49,37 +49,51 @@ $(document).ready(function () {
     $("#news .newsBlock").toggle(".showBlock");
   };
 
-  $(".tab_content").addClass("tab_content_active");
+  $("#mainNews").fadeIn();
 
   setTimeout(function () {
-    $(".tabs li a.active").trigger("click");
-  }, 2000);
+    $(".active").trigger("click");
+  }, 1000);
 
-  $(".tabs li a").click(function () {
-    $(".tabs li a").removeClass("active");
-    $(this).addClass("active");
+  $(".tabs li").click(function () {
+    if ($(this).find("a").attr("class") == "active") {
+      return false;
+    }
 
-    $(".tab_content_container > .tab_content_active")
-      .removeClass("tab_content_active")
-      .fadeOut(200);
-    $(this.rel).fadeIn(500).addClass("tab_content_active");
+    var link = $(this).children().attr("href");
+    var prevActive = $("li a.active").attr("href");
+    $("li a.active").removeClass("active");
+    $(this).find("a").addClass("active");
+    // скрываем/показываем текст вкладок
+    $(prevActive).fadeOut(300, function () {
+      $(link).fadeIn();
+      newsSlide.update();
+      primarySlider.update();
+
+      newsSlide2.update();
+      primarySlider2.update();
+
+      newsSlide3.update();
+      primarySlider3.update();
+
+      primarySliderTwo.update();
+    });
+    return false;
   });
 
-
   let coll = document.getElementsByClassName("arrowDownMenu");
-  
+
   for (let i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      let g =  this.parentElement ;
+    coll[i].addEventListener("click", function () {
+      let g = this.parentElement;
       g.classList.toggle("activeArrow");
       var content = g.nextSibling.nextSibling;
       if (content.style.maxHeight) {
         content.style.maxHeight = null;
-      }
-      else {
+      } else {
         content.style.maxHeight = content.scrollHeight + "px";
       }
-    })
+    });
   }
 
   $("#birthDay .up").on("click", function (e) {
@@ -179,187 +193,128 @@ $(document).ready(function () {
 
   // news
 
-  var newsSlide = new Splide(".sliderNewsMain .splide", {
-    type: "slide",
-    perPage: 1,
-    perMove: 1,
-    arrows: false,
-    pagination: false,
-    cover: true,
-    rewind: true,
-  }).mount();
-
-  var primarySlider = new Splide(".sliderNewsSecondTab1 .splide", {
-    arrows: true,
-    perPage: 4,
-    perMove: 1,
-    arrowPath: "",
-    isNavigation: true,
-    pagination: false,
-    gap: 25,
-    classes: {
-      arrows: "prettyArrow buttonsSlider2",
-      prev: "prev clickButtonL",
-      next: "next clickButtonR",
+  var primarySlider = new Swiper(".sliderNewsSecondTab1 .swiper-container", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    navigation: {
+      prevEl: ".splide-prev101",
+      nextEl: ".splide-next101",
     },
-    pagination: false,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
     breakpoints: {
-      320: {
-        perPage: 2,
+      0: {
+        slidesPerView: 2,
       },
       768: {
-        perPage: 3,
+        slidesPerView: 3,
       },
-      1920: {
-        perPage: 4,
+      1440: {
+        slidesPerView: 4,
       },
     },
-  }).mount();
-  newsSlide.sync(primarySlider).mount();
+  });
 
-  //////////////////////
-
-  new Splide(".sliderNewsThirtyTab1 .splide", {
-    type: "loop",
-    arrowPath: "",
-    gap: 25,
-    perMove: 1,
-    perPage: 4,
-    classes: {
-      arrows: "prettyArrow buttonsSlider2",
-      prev: "prev",
-      next: "next",
+  var newsSlide = new Swiper(".sliderNewsMain .swiper-container", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".customNextBtn",
+      prevEl: ".customPrevBtn",
     },
-    pagination: false,
+    thumbs: {
+      swiper: primarySlider,
+    },
+  });
+
+  var primarySliderTwo = new Swiper(".sliderNewsThirtyTab .swiper-container", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    navigation: {
+      prevEl: ".splide-prev102",
+      nextEl: ".splide-next102",
+    },
     breakpoints: {
-      320: {
-        perPage: 2,
+      0: {
+        slidesPerView: 2,
       },
       768: {
-        perPage: 3,
+        slidesPerView: 3,
+      },
+      1440: {
+        slidesPerView: 4,
       },
     },
-  }).mount();
+  });
 
   // 2
 
-  var newsSlide2 = new Splide(".sliderNewsMain2 .splide", {
-    type: "slide",
-    perPage: 1,
-    perMove: 1,
-    arrows: false,
-    pagination: false,
-    cover: true,
-    rewind: true,
-  }).mount();
-
-  var primarySlider2 = new Splide(".sliderNewsSecondTab2 .splide", {
-    arrows: true,
-    perMove: 1,
-    perPage: 4,
-    arrowPath: "",
-    isNavigation: true,
-    pagination: false,
-    gap: 25,
-    classes: {
-      arrows: "prettyArrow buttonsSlider2",
-      prev: "prev clickButtonL",
-      next: "next clickButtonR",
+  var primarySlider2 = new Swiper(".sliderNewsSecondTab2 .swiper-container", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    navigation: {
+      prevEl: ".splide-prev201",
+      nextEl: ".splide-next201",
     },
-    pagination: false,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
     breakpoints: {
-      320: {
-        perPage: 2,
+      0: {
+        slidesPerView: 2,
       },
       768: {
-        perPage: 3,
+        slidesPerView: 3,
+      },
+      1440: {
+        slidesPerView: 4,
       },
     },
-  }).mount();
-  newsSlide2.sync(primarySlider2).mount();
+  });
 
-  new Splide(".sliderNewsThirtyTab2 .splide", {
-    type: "loop",
-    arrowPath: "",
-    gap: 25,
-    perMove: 1,
-    perPage: 4,
-    classes: {
-      arrows: "prettyArrow buttonsSlider2",
-      prev: "prev",
-      next: "next",
+  var newsSlide2 = new Swiper(".sliderNewsMain2 .swiper-container", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".customNextBtn",
+      prevEl: ".customPrevBtn",
     },
-    pagination: false,
+    thumbs: {
+      swiper: primarySlider2,
+    },
+  });
+
+  // 3
+
+  var primarySlider3 = new Swiper(".sliderNewsSecondTab3 .swiper-container", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    navigation: {
+      prevEl: ".splide-prev301",
+      nextEl: ".splide-next301",
+    },
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
     breakpoints: {
-      320: {
-        perPage: 2,
+      0: {
+        slidesPerView: 2,
       },
       768: {
-        perPage: 3,
+        slidesPerView: 3,
+      },
+      1440: {
+        slidesPerView: 4,
       },
     },
-  }).mount();
+  });
 
-  //3
-
-  var newsSlide3 = new Splide(".sliderNewsMain3 .splide", {
-    type: "slide",
-    perPage: 1,
-    perMove: 1,
-    arrows: false,
-    pagination: false,
-    cover: true,
-    rewind: true,
-  }).mount();
-
-  var primarySlider3 = new Splide(".sliderNewsSecondTab3 .splide", {
-    arrows: true,
-    perPage: 4,
-    perMove: 1,
-    arrowPath: "",
-    isNavigation: true,
-    pagination: false,
-    gap: 25,
-    classes: {
-      arrows: "prettyArrow buttonsSlider2",
-      prev: "prev clickButtonL",
-      next: "next clickButtonR",
+  var newsSlide3 = new Swiper(".sliderNewsMain3 .swiper-container", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".customNextBtn",
+      prevEl: ".customPrevBtn",
     },
-    pagination: false,
-    breakpoints: {
-      320: {
-        perPage: 2,
-      },
-      768: {
-        perPage: 3,
-      },
+    thumbs: {
+      swiper: primarySlider3,
     },
-  }).mount();
-  newsSlide3.sync(primarySlider3).mount();
-
-  new Splide(".sliderNewsThirtyTab3 .splide", {
-    type: "loop",
-    arrowPath: "",
-    gap: 25,
-    perMove: 1,
-    classes: {
-      arrows: "prettyArrow buttonsSlider2",
-      prev: "prev",
-      next: "next",
-    },
-    pagination: false,
-    breakpoints: {
-      320: {
-        perPage: 2,
-      },
-      768: {
-        perPage: 3,
-      },
-      1920: {
-        perPage: 4,
-      },
-    },
-  }).mount();
+  });
 
   //
 

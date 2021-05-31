@@ -18,6 +18,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href='https://css.gg/arrow-long-left.css' rel='stylesheet'>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/media.css">
@@ -122,7 +123,7 @@
                             </div>
                             <div class="menuContent">
                                 <div class="search">
-                                    <form action="" class="wrapForm" method="get">
+                                    <form class="wrapForm" method="get">
                                         <span>Искать: </span>
                                         <input type="text">
                                         <button type="submit" class="buttonSear"><img src="assets/img/magnifier.png"
@@ -431,7 +432,7 @@
                     <div class="icons">
                         <div class="formSearch">
                             <a href="#" class="searchButtonImg"><img src="assets/img/magnifier.png" alt="magn"></a>
-                            <form action="" class="wrapForm" method="get">
+                            <form class="wrapForm" method="get">
                                 <button type="submit" class="searchButton"><img src="assets/img/magnifier.png"
                                         alt="magn"></button>
                                 <input type="text">
@@ -512,8 +513,7 @@
                 <div class="splide">
                     <div class="prettyArrow buttonsSlider2 splide__arrows">
                         <div class="secondSliderButtons">
-                            <button class="splide__arrow prev" aria-controls="splide01-track"
-                                aria-label="Go to last slide"></button>
+                            <button class="splide__arrow prev"></button>
                             <img src="assets/img/finger.png" alt="">
                             <button class="splide__arrow next"></button>
                         </div>
@@ -798,14 +798,14 @@
 
                             <ul class="tabs">
                                 <li>
-                                    <a href="javascript:void(0);" rel="#tabcontent1" class="tab active">Главные
+                                    <a href="#mainNews" class="tab active">Главные
                                         новости</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0);" rel="#tabcontent2" class="tab">В центре внимания</a>
+                                    <a href="#centerVn" class="tab">В центре внимания</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0);" rel="#tabcontent3" class="tab">Достижения</a>
+                                    <a href="#dost" class="tab">Достижения</a>
                                 </li>
                             </ul>
                         </div>
@@ -817,563 +817,563 @@
                         </div>
                     </div>
 
-                    <div class="tab_content_container">
-                        <div class="tab_content " id="tabcontent1" customSlider="1">
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane " id="mainNews" customSlider="1">
                             <div class="sliderNewsMain">
-                                <div class="splide">
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция1</h1>
-                                                                <p>В ДГТУ прошла Всероссийская научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция1</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция2</h1>
-                                                                <p>В ДГТУ прошла Всероссийская научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция3</h1>
-                                                                <p>В ДГТУ прошла Всероссийская научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция2</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция4</h1>
-                                                                <p>В ДГТУ прошла Всероссийская научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция4</h1>
-                                                                <p>В ДГТУ прошла Всероссийская научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция3</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция4</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
+                                                        </div>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция5</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
+                                                        </div>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="sliderNewsSecondTab1 sliderNews">
-                                <div class="splide">
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии1</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии1</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии2</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии2</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии3</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии3</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии4</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии4</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии5</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии5</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <h1>Мероприятия</h1>
-                            <div class="sliderNews sliderNewsThirtyTab1">
-                                <div class="splide">
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="card">
-                                                            <img src="assets/img/events.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии в рамках</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <div class="prettyArrow">
+                                        <div class="custom-owl-nav owl-nav">
+                                            <div class="splide-prev101 owl-prev"></div>
+                                            <div class="splide-next101 owl-next"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="tab_content none" id="tabcontent2" customSlider="2">
+                        <div class="tab-pane" id="centerVn" customSlider="2">
                             <div class="sliderNewsMain2">
-                                <div class="splide">
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция101</h1>
-                                                                <p>В ДГТУ прошла Всероссийская научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция1</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция102</h1>
-                                                                <p>В ДГТУ прошла Всероссийская научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция103</h1>
-                                                                <p>В ДГТУ прошла Всероссийская научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция2</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция104</h1>
-                                                                <p>В ДГТУ прошла Всероссийская научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция105</h1>
-                                                                <p>В ДГТУ прошла Всероссийская научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция3</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция4</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
+                                                        </div>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция5</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
+                                                        </div>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="sliderNewsSecondTab2 sliderNews">
-                                <div class="splide">
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии101</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии1</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии102</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии2</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии103</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии3</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии104</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии4</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии105</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии5</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <h1>Мероприятия</h1>
-                            <div class="sliderNewsThirtyTab2 sliderNews">
-                                <div class="splide">
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="card">
-                                                            <img src="assets/img/events.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии в рамках</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <div class="prettyArrow">
+                                        <div class="custom-owl-nav owl-nav">
+                                            <div class="splide-prev201 owl-prev"></div>
+                                            <div class="splide-next201 owl-next"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tab_content none" id="tabcontent3" customSlider="3">
+                        <div class="tab-pane" id="dost" customSlider="3">
                             <div class="sliderNewsMain3">
-                                <div class="splide">
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция121</h1>
-                                                                <p>В ДГТУ прошла Всероссийская научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция1</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция122</h1>
-                                                                <p>В ДГТУ прошла Всероссийская научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция123</h1>
-                                                                <p>В ДГТУ прошла Всероссийская научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция2</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция124</h1>
-                                                                <p>В ДГТУ прошла Всероссийская научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="mainBlock">
-                                                            <div class="left">
-                                                                <h1>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая конференция125</h1>
-                                                                <p>В ДГТУ прошла Всероссийская
-                                                                    научно-техническая
-                                                                    конференция</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                <img src="assets/img/section2Block1Right.png"
-                                                                    alt="mainImg">
-                                                            </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция3</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
                                                         </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция4</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
+                                                        </div>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <div class="mainBlock">
+                                                        <div class="left">
+                                                            <h1>В ДГТУ прошла Всероссийская
+                                                                научно-техническая конференция5</h1>
+                                                            <p>В ДГТУ прошла Всероссийская научно-техническая
+                                                                конференция</p>
+                                                        </div>
+                                                        <div class="right">
+                                                            <img src="assets/img/section2Block1Right.png" alt="mainImg">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="sliderNewsSecondTab3 sliderNews">
-                                <div class="splide">
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии121</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии1</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии122</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии2</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии123</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии3</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии124</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии4</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <div>
-                                                        <div class="card">
-                                                            <img src="assets/img/imgNews.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии125</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="item">
+                                                <div>
+                                                    <div class="card">
+                                                        <img src="assets/img/imgNews.png" alt="imgSlider">
+                                                        <h5>Работа стратегической сессии5</h5>
+                                                        <p class="date">31.12.2020</p>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <h1>Мероприятия</h1>
-                            <div class="sliderNewsThirtyTab3 sliderNews">
-                                <div class="splide">
-                                    <div class="splide__track">
-                                        <ul class="splide__list">
-                                            <li class="splide__slide">
-                                                <div class="item">
-                                                    <a href="#">
-                                                        <div class="card">
-                                                            <img src="assets/img/events.png" alt="imgSlider">
-                                                            <h5>Работа стратегической сессии в рамках</h5>
-                                                            <p class="date">31.12.2020</p>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <div class="prettyArrow">
+                                        <div class="custom-owl-nav owl-nav">
+                                            <div class="splide-prev301 owl-prev"></div>
+                                            <div class="splide-next301 owl-next"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <h1 class="evH1">Мероприятия</h1>
+                        <div class="sliderNews sliderNewsThirtyTab">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="#">
+                                                <div class="card">
+                                                    <img src="assets/img/events.png" alt="imgSlider">
+                                                    <h5>Работа стратегической сессии в рамках</h5>
+                                                    <p class="date">31.12.2020</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="#">
+                                                <div class="card">
+                                                    <img src="assets/img/events.png" alt="imgSlider">
+                                                    <h5>Работа стратегической сессии в рамках</h5>
+                                                    <p class="date">31.12.2020</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="#">
+                                                <div class="card">
+                                                    <img src="assets/img/events.png" alt="imgSlider">
+                                                    <h5>Работа стратегической сессии в рамках</h5>
+                                                    <p class="date">31.12.2020</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="#">
+                                                <div class="card">
+                                                    <img src="assets/img/events.png" alt="imgSlider">
+                                                    <h5>Работа стратегической сессии в рамках</h5>
+                                                    <p class="date">31.12.2020</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <a href="#">
+                                                <div class="card">
+                                                    <img src="assets/img/events.png" alt="imgSlider">
+                                                    <h5>Работа стратегической сессии в рамках</h5>
+                                                    <p class="date">31.12.2020</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prettyArrow">
+                                    <div class="custom-owl-nav owl-nav">
+                                        <div class="splide-prev102 owl-prev"></div>
+                                        <div class="splide-next102 owl-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
         </div>
@@ -1610,7 +1610,7 @@
                                                 Абдуллаевич</h6>
                                             <p>старший преподаватель кафедры «Бурение нефтяных и газовых скважин»</p>
                                         </div>
-                                    </a h>
+                                    </a>
                                 </li>
                                 <li class="splide__slide">
                                     <a href="#">
@@ -1619,7 +1619,7 @@
                                                 Абдуллаевич</h6>
                                             <p>старший преподаватель кафедры «Бурение нефтяных и газовых скважин»</p>
                                         </div>
-                                    </a h>
+                                    </a>
                                 </li>
                                 <li class="splide__slide">
                                     <a href="#">
@@ -1628,7 +1628,7 @@
                                                 Абдуллаевич</h6>
                                             <p>старший преподаватель кафедры «Бурение нефтяных и газовых скважин»</p>
                                         </div>
-                                    </a h>
+                                    </a>
                                 </li>
                                 <li class="splide__slide">
                                     <a href="#">
@@ -1637,7 +1637,7 @@
                                                 Абдуллаевич</h6>
                                             <p>старший преподаватель кафедры «Бурение нефтяных и газовых скважин»</p>
                                         </div>
-                                    </a h>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -1837,7 +1837,9 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
     <script src="assets/js/script.js"></script>
 </body>
 
